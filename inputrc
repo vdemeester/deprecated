@@ -1,0 +1,3 @@
+# Set VI mode to any readline app.
+set editing-mode vi
+set keymap vi

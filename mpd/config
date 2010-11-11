@@ -1,0 +1,56 @@
+music_directory		"~/music"
+playlist_directory "~/.mpd/playlists"
+db_file "~/.mpd/mpd.db"
+log_file "~/.mpd/mpd.log"
+pid_file "~/.mpd/mpd.pid"
+state_file "~/.mpd/mpdstate"
+user "vincent"
+bind_to_address		"any"
+# And for Unix Socket
+#bind_to_address		"~/.mpd/socket"
+port				"6600"
+#log_level			"default"
+#gapless_mp3_playback			"yes"
+#save_absolute_paths_in_playlists	"no"
+#metadata_to_use	"artist,album,title,track,name,genre,date,composer,performer,disc"
+follow_outside_symlinks	"yes"
+follow_inside_symlinks		"yes"
+#zeroconf_enabled		"yes"
+#zeroconf_name			"Music Player"
+#password                        "password@read,add,control,admin"
+#default_permissions             "read,add,control,admin"
+# An example of an ALSA output:
+#
+audio_output {
+	type		"alsa"
+	name		"My ALSA Device"
+#	device		"hw:0,0"	# optional
+#	format		"44100:16:2"	# optional
+#	mixer_device	"default"	# optional
+#	mixer_control	"PCM"		# optional
+#	mixer_index	"0"		# optional
+}
+#
+#audio_output {
+#	type		"oss"
+#	name		"My OSS Device"
+##	device		"/dev/dsp"	# optional
+##	format		"44100:16:2"	# optional
+##	mixer_device	"/dev/mixer"	# optional
+##	mixer_control	"PCM"		# optional
+#}
+#audio_output_format		"44100:16:2"
+#samplerate_converter		"Fastest Sinc Interpolator"
+mixer_type			"hardware"
+#mixer_type			"disabled"
+#replaygain_preamp		"0"
+#volume_normalization		"no"
+#audio_buffer_size		"2048"
+#buffer_before_play		"10%"
+#connection_timeout		"60"
+#max_connections		"10"
+#max_playlist_length		"16384"
+#max_command_list_size		"2048"
+#max_output_buffer_size		"8192"
+filesystem_charset		"UTF-8"
+#id3v1_encoding			"ISO-8859-1"
