@@ -3,10 +3,10 @@
 ! vim:ai:si:et:ts=4:sw=4:ft=xdefaults:
 
 ! Xft
-Xft.dpi: 96
-Xft.antialias: true
-Xft.rgba: rgba
-Xft.hinting: true
+!Xft.dpi: 96
+!Xft.antialias: true
+!Xft.rgba: rgba
+!Xft.hinting: true
 !Xft.hintstyle: hintsligth
 
 ! URxvt
@@ -26,15 +26,17 @@ URxvt*borderLess: false
 
 !URxvt.font:xft:envy code r:medium:pixelsize=12
 !URxvt.boldFont:xft:envy code r:medium:pixelsize=12
-URxvt.font:xft:Droid Sans Mono:medium:pixelsize=12
-URxvt.boldFont:xft:Droid Sans Mono:medium:pixelsize=12
+!URxvt.font:xft:Droid Sans Mono:medium:pixelsize=12
+!URxvt.boldFont:xft:Droid Sans Mono:medium:pixelsize=12
+URxvt.font:xft:Monospace:medium:pixelsize=12
+URxvt.boldFont:xft:monospace:bold:pixelsize=12
 !URxvt.font:xft:inconsolata:medium:pixelsize=12
 !URxvt.boldFont:xft:inconsolata:medium:pixelsize=12
 !URxvt.font:     -*-terminus-medium-r-*-*-16-*-*-*-*
 !URxvt.boldFont: -*-terminus-medium-r-*-*-16-*-*-*-*
 
-URxvt*termName: rxvt
+URxvt*termName: xterm-256color
 
-#include "/home/vincent/.colours/lich"
+#include "/home/vincent/.colours/soft"
 
 

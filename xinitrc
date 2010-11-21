@@ -15,6 +15,8 @@ setxkbmap -option terminate:escape
 xmodmap ~/.Xmodmap
 # Set better defailt cursor for X
 xsetroot -cursor_name left_ptr
+# Full brigthness
+# setpci -s 00:02.0 f4.b=ff
 # hide curson
 unclutter -idle 5 &
 # Start terminal emulation daemon
