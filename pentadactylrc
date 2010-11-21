@@ -1,0 +1,7 @@
+"hg4849 (created: 2010/11/19 01:00:12)
+
+set guioptions=rbCsT
+set runtimepath=/home/vincent/.pentadactyl
+
+source ~/.vimrc.bepo
+" vim: set ft=pentadactyl:

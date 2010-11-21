@@ -23,7 +23,7 @@ if !has("gui_running")
 endif
 " {{{
 if has("gui_running")
-	set guifont=Droid\ Sans\ Mono\ 9
+	"set guifont=Droid\ Sans\ Mono\ 9
 	set guioptions=gitac
 	set foldcolumn=2
 
