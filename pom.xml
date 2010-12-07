@@ -13,6 +13,7 @@
 		<!-- Tests -->
 		<junit.version>4.8.1</junit.version>
 		<easymock.version>2.5.2</easymock.version>
+		<persistence-api.version>1.0</persistence-api.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -24,6 +25,11 @@
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
 			<version>${commons.lang.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>persistence-api</artifactId>
+			<version>${persistence-api.version}</version>
 		</dependency>
 		<!-- Test dependencies -->
 		<dependency>
