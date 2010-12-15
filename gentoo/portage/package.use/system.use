@@ -1,5 +1,6 @@
 sys-fs/udev extras
 sys-auth/pambase ssh
+app-admin/sudo offensive
 # gtk for gcc ?
 sys-devel/gcc -gtk
 sys-apps/pcsc-lite usb
