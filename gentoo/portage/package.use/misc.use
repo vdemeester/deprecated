@@ -1,0 +1,4 @@
+app-crypt/gnupg pcsc-lite smartcard
+app-shells/zsh maildir doc
+app-admin/conky moc mpd thinkpad wifi
+

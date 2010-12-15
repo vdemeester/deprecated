@@ -1,0 +1,5 @@
+# misc
+app-text/docbook-sgml-utils jadetex
+app-text/lcdf-typetools kpathsea
+# latex
+app-text/texlive extra graphics latex3 xetex context

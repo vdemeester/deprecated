@@ -1,0 +1,8 @@
+# lib
+net-libs/xulrunner system-sqlite
+# mail
+mail-mta/msmtp doc
+net-mail/offlineimap doc
+mail-client/mutt doc imap idn nntp pop sasl sidebar smime smtp tokyocabinet
+# web
+www-client/firefox system-sqlite

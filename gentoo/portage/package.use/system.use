@@ -1,0 +1,8 @@
+sys-fs/udev extras
+sys-auth/pambase ssh
+sys-devel/gcc bootstrap build objc objc++
+sys-apps/pcsc-lite usb
+# gentoo
+sys-apps/portage build doc
+app-portage/eix tools
+app-portage/layman bazaar cvs darcs git mercurial subversion

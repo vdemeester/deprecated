@@ -1,0 +1,6 @@
+# base
+x11-base/xorg-server -hal
+# libs
+# tools
+x11-misc/dzen xpm
+x11-terms/rxvt-unicode 256-color afterimage

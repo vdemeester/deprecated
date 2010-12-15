@@ -1,0 +1,11 @@
+# libs
+media-libs/openjpeg tools
+media-libs/freetype kpathsea
+media-libs/gd fontconfig
+media-libs/libpng apng
+media-libs/libvpx -doc
+# sound
+media-sound/mpd -lame ao cue mikmod musepack
+# video
+media-video/ffmpeg doc faac theora x264 xvid
+media-video/mplayer doc mng win32codecs
