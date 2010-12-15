@@ -1,6 +1,7 @@
 sys-fs/udev extras
 sys-auth/pambase ssh
-sys-devel/gcc bootstrap build objc objc++
+# gtk for gcc ?
+sys-devel/gcc -gtk
 sys-apps/pcsc-lite usb
 # gentoo
 sys-apps/portage build doc
