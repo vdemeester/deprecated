@@ -1,0 +1,53 @@
+# Xorg keywords
+x11-base/xorg-server -hal
+# else
+app-portage/eix tools
+dev-vcs/git cvs subversion
+media-libs/gd fontconfig
+media-libs/openjpeg tools
+media-libs/freetype kpathsea
+sys-apps/portage build
+app-text/docbook-sgml-utils jadetex
+sys-fs/udev extras
+sys-auth/pambase ssh
+sys-devel/gcc bootstrap build objc objc++
+dev-vcs/subversion ctypes-python doc extras -dso
+app-crypt/gnupg pcsc-lite smartcard
+sys-apps/pcsc-lite usb
+app-portage/layman bazaar cvs darcs git mercurial subversion
+dev-db/sqlite extensions
+app-shells/zsh maildir doc
+app-text/texlive extra graphics latex3 xetex context
+app-text/lcdf-typetools kpathsea
+x11-misc/dzen ~amd64
+x11-misc/dmenu ~amd64
+mail-client/mutt imap idn nntp pop sasl sidebar smime smtp tokyocabinet
+x11-terms/rxvt-unicode 256-color afterimage
+x11-misc/dzen xpm
+dev-haskell/tagsoup hscolour
+x11-misc/xmonad-extras hscolour volume mpd eval
+x11-wm/xmonad hscolour
+dev-haskell/x11 hscolour
+media-sound/mpd -lame ao cue mikmod musepack
+media-video/ffmpeg faac theora x264 xvid
+app-admin/conky moc mpd thinkpad wifi
+media-video/mplayer mng win32codecs
+gnome-base/gvfs fuse
+media-libs/libpng apng
+dev-lang/php gd
+media-libs/libvpx -doc
+www-client/firefox system-sqlite
+net-libs/xulrunner system-sqlite
+dev-db/sqlite secure-delete unlock-notify
+dev-vcs/darcs doc
+dev-vcs/bzr doc
+dev-haskell/http doc hscolour
+dev-haskell/regex-posix hscolour
+mail-mta/msmtp doc
+x11-wm/xmonad doc
+dev-lang/perl doc
+dev-python/pygments doc
+dev-python/numpy doc
+net-mail/offlineimap doc
+dev-lang/python doc sqlite
+sys-apps/portage doc
