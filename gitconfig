@@ -24,7 +24,7 @@
 	changed = yellow
 	untracked = red
 [core]
-	editor = vim
+	editor = gvim -v
 	excludesfile = ~/.gitignore_global
 [push]
 	default = matching
