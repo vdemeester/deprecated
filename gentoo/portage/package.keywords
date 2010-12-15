@@ -19,6 +19,7 @@ dev-libs/nspr ~amd64
 =dev-python/python-docs-2.7.1 ~amd64
 =dev-python/python-docs-3.1.3 ~amd64
 dev-python/virtualenvwrapper ~amd64
+sys-auth/thinkfinger ~amd64
 app-doc/doxygen ~amd64
 x11-apps/xinit ~amd64
 x11-drivers/xf86-video-intel ~amd64
