@@ -24,10 +24,6 @@ x11-misc/dmenu ~amd64
 mail-client/mutt imap idn nntp pop sasl sidebar smime smtp tokyocabinet
 x11-terms/rxvt-unicode 256-color afterimage
 x11-misc/dzen xpm
-dev-haskell/tagsoup hscolour
-x11-misc/xmonad-extras hscolour volume mpd eval
-x11-wm/xmonad hscolour
-dev-haskell/x11 hscolour
 media-sound/mpd -lame ao cue mikmod musepack
 media-video/ffmpeg faac theora x264 xvid
 app-admin/conky moc mpd thinkpad wifi
@@ -41,8 +37,6 @@ net-libs/xulrunner system-sqlite
 dev-db/sqlite secure-delete unlock-notify
 dev-vcs/darcs doc
 dev-vcs/bzr doc
-dev-haskell/http doc hscolour
-dev-haskell/regex-posix hscolour
 mail-mta/msmtp doc
 x11-wm/xmonad doc
 dev-lang/perl doc

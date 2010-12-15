@@ -1,0 +1,11 @@
+# Libraries
+dev-haskell/tagsoup hscolour doc
+dev-haskell/x11 hscolour doc
+dev-haskell/http hscolour doc
+dev-haskell/regex-posix hscolour doc
+
+# XMonad
+x11-wm/xmonad hscolour doc
+x11-wm/xmonad-contrib xft doc
+x11-misc/xmonad-extras hscolour volume mpd eval doc
+
