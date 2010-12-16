@@ -1,11 +1,12 @@
 sys-fs/udev extras
 sys-auth/pambase ssh
 app-admin/sudo offensive
+app-laptop/tp_smapi hdaps
 # gtk for gcc ?
 sys-devel/gcc -gtk
 sys-apps/pcsc-lite usb
 # gentoo
-sys-apps/portage build doc
+sys-apps/portage build doc python3
 app-portage/eix tools doc sqlite
 app-admin/eselect doc
 app-portage/layman bazaar cvs darcs git mercurial subversion
