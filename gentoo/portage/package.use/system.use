@@ -6,7 +6,7 @@ app-laptop/tp_smapi hdaps
 sys-devel/gcc -gtk
 sys-apps/pcsc-lite usb
 # gentoo
-sys-apps/portage build doc python3
+sys-apps/portage build doc
 app-portage/eix tools doc sqlite
 app-admin/eselect doc
 app-portage/layman bazaar cvs darcs git mercurial subversion
