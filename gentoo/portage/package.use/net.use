@@ -6,3 +6,4 @@ net-mail/offlineimap doc
 mail-client/mutt doc imap idn nntp pop sasl sidebar smime smtp tokyocabinet
 # web
 www-client/firefox system-sqlite
+www-client/elinks finger idn ftp javascript

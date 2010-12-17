@@ -5,6 +5,13 @@ x11-base/xorg-drivers ~amd64
 dev-python/fabric ~amd64
 dev-python/pip ~amd64
 dev-util/gtk-doc ~amd64
+app-text/par
+x11-libs/gtkdatabox
+app-misc/klavaro
+dev-python/oauth
+net-misc/pino
+dev-lang/vala
+dev-libs/libgee
 dev-util/eclipse-sdk
 dev-java/maven-bin
 dev-java/junit

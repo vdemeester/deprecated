@@ -1,3 +1,6 @@
-dev-java/maven
-dev-java/ant
 dev-java/swt xulrunner
+dev-java/tomcat-servlet-api source
+www-servers/tomcat doc source
+dev-java/commons-daemon doc source
+dev-java/commons-pool doc source
+dev-java/commons-dbcp doc source
