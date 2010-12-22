@@ -6,6 +6,7 @@ media-libs/libpng apng
 media-libs/libvpx -doc
 # sound
 media-sound/mpd -lame ao cue mikmod musepack
+media-sound/moc wavpack aac ffmpeg libsamplerate modplug musepack speex
 # video
 media-video/ffmpeg doc faac theora x264 xvid
 media-video/mplayer doc mng win32codecs

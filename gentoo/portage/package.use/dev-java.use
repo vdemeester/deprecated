@@ -4,3 +4,4 @@ www-servers/tomcat doc source
 dev-java/commons-daemon doc source
 dev-java/commons-pool doc source
 dev-java/commons-dbcp doc source
+dev-java/ant-ivy doc examples

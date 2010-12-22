@@ -5,4 +5,4 @@ dev-python/pygments doc
 dev-python/numpy doc
 dev-python/pip doc
 dev-python/virtualenv doc
-
+dev-python/django doc postgres sqlite
