@@ -15,13 +15,25 @@ setxkbmap -option terminate:escape
 xmodmap ~/.Xmodmap
 # Set better defailt cursor for X
 xsetroot -cursor_name left_ptr
-# Full brigthness
-# setpci -s 00:02.0 f4.b=ff
+# If were on Thinkpad (or at least having a Trackpoint)
+if [[ -f /usr/bin/xinput ]]; then
+    tp=`/usr/bin/xinput list | grep "TPPS/2 IBM TrackPoint"`
+    echo $tp
+    if [[ -n "$tp" ]]; then
+        # Trackpoint is on, let's play with xinput
+        # Vertical scrolling
+        xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 8 1
+        xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 8 2
+        # Horizontal scrolling (with vertical enabled)
+        xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
+    fi
+fi
 # hide curson
 unclutter -idle 5 &
 # Start terminal emulation daemon
 urxvtd -q -o -f
 # Set the background (ugly right now, isn't it ?)
-feh --bg-center $HOME/pictures/wallpapers/goro-debian-1680x1050.jpg
+#feh --bg-center $HOME/pictures/wallpapers/goro-debian-1680x1050.jpg
+feh --bg-scale ~/pictures/wallpapers/current.jpg 
 # and start XMonad
 exec xmonad
