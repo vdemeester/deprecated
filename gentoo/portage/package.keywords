@@ -25,8 +25,8 @@ x11-wm/xmonad ~amd64
 x11-wm/xmonad-contrib ~amd64
 x11-misc/dzen ~amd64
 x11-misc/dmenu ~amd64
-www-client/firefox ~amd64
-net-libs/xulrunner ~amd64
+=www-client/firefox-4.0_beta8_pre-r9 ~amd64
+=net-libs/xulrunner-2.0_beta8_pre-r9 ~amd64
 =media-libs/libpng-1.4.4 ~amd64
 x11-libs/cairo ~amd64
 x11-libs/pixman ~amd64
