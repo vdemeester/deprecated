@@ -33,7 +33,13 @@ unclutter -idle 5 &
 # Start terminal emulation daemon
 urxvtd -q -o -f
 # Set the background (ugly right now, isn't it ?)
-#feh --bg-center $HOME/pictures/wallpapers/goro-debian-1680x1050.jpg
 feh --bg-scale ~/pictures/wallpapers/current.jpg 
+# Autostart programs
+if [ -d $HOME/.xinitrc.d ] ; then
+    for f in $HOME/.xinitrc.d/*.sh ; do
+        [ -x "$f" ] && . "$f"
+    done
+    unset f
+fi
 # and start XMonad
 exec xmonad
