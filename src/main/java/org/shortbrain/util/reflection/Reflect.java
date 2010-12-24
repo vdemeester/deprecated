@@ -6,11 +6,11 @@ package org.shortbrain.util.reflection;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.Date;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -19,7 +19,6 @@ import java.util.Map;
 import java.util.Set;
 
 import javax.management.ReflectionException;
-import javax.persistence.Transient;
 
 import org.apache.commons.lang.StringUtils;
 
@@ -29,7 +28,7 @@ import org.apache.commons.lang.StringUtils;
  */
 public class Reflect {
 
-	private static final Set<String> defaultHiddenFields = new HashSet<String>(
+  protected static final Set<String> defaultHiddenFields = new HashSet<String>(
 			Arrays.asList(new String[] { "log", "serialVersionUID" }));
 
 	/**
@@ -59,10 +58,8 @@ public class Reflect {
 		if (o != null) {
 			fields = new ArrayList<Field>();
 			for (Field field : getDeclaredFields(o.getClass(), true)) {
-				if (field.getAnnotation(Transient.class) == null) {
 					if (!defaultHiddenFields.contains(field.getName())) {
 						fields.add(field);
-					}
 				}
 			}
 			Collections.sort(fields, new FieldComparator());
