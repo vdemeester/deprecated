@@ -1,0 +1,89 @@
+# $HOME/.muttrc file
+set alias_file = ~/.mutt/alias
+set certificate_file = ~/.mutt/certificates
+set header_cache = ~/.mutt/cache/headers
+set mailcap_path 	= ~/.mutt/mailcap
+set signature = ~/.mutt/sig
+set tmpdir = ~/.mutt/tmp
+
+ignore *
+unignore From: To: Cc: Subject: Date:
+
+set editor = "gvim -v +:silent+?^$" # skip to last blank line in vim
+set ispell = "aspell -e -c"
+set query_command = "abook --mutt-query '%s'"
+
+# maildir settings
+set mbox_type=Maildir
+set folder=$HOME/documents/mails
+
+# main options
+unset mark_old # no O (old new)
+set menu_scroll
+set pager_index_lines = 7
+set pager_context = 5
+set pager_stop # don't go to next message
+set pipe_decode
+set reverse_alias
+set sort = threads
+set sort_aux = reverse-last-date-received
+unset sort_re
+set thread_received
+set tilde
+set timeout = 3
+
+# HTML and Enriched messages
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+
+set alias_format = "%4n %t %-20a %r"
+#set date_format = "%m/%d/%y at %I:%M"
+set index_format = "%3C %Z %[!%y/%m/%d] %-17.17F %s"
+set quote_regexp        = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+set reply_regexp        = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+set status_format       = "-%r- %v / %f %m%?n? [+%n]?%?d? [-%d]?%?t? [*%t]? /%?p?/ %p waiting to send /?%>(%P)"
+
+# Composing
+set askcc
+set edit_headers
+set fast_reply
+set forward_format = "Fwd: %s"
+set forward_quote
+set realname = "Vincent Demeester"
+set reply_to
+set from = "vincent@demeester.fr"
+set record=+/personal/Sent
+set spoolfile=+/personal/INBOX
+set postponed=+/personal/Drafts
+
+set sendmail = "/usr/bin/msmtp -a iki-project"
+
+# boxes, lists
+subscribe info-fsf france@fsfeurope.org discutons@fsfeurope.org vimperator muttator afpy-membres django@lists.afpy.org
+# TODO
+#mailboxes +--Personal---- +personal/INBOX +personal/Family +personal/Achat
+
+#source ~/.mutt/colors.muttrc
+source ~/.mutt/256colors.muttrc
+# conditionally source sidebar options 
+source `FILE=$HOME/.mutt/sidebar.muttrc; mutt -v | grep -Fq sidebar || FILE=/dev/null; echo $FILE`
+
+#source ~/.mutt/personal.muttrc
+
+alternates (vincent@demeester.fr|vincent.demeester@iki-project.fr.eu.org|vdemeester@shortbrain.org|vdemeester@gmail.com)
+
+# Url view/exctract url
+macro index,pager \cb "<enter-command> set my_pdsave=\$pipe_decode<enter>\
+<enter-command> unset pipe_decode<enter>\
+<pipe-message>extract_url<enter>\
+<enter-command> set pipe_decode=\$my_pdsave<enter>" "get URLs"
+
+# Trying sthg, called macro ?
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+
+# quick-sync ~/Mail immediately with offlineimap
+macro index Z   "<shell-escape>~/.bin/mailrun.sh -q -o<enter>" "sync IMAP"
+
+# offlineimap
+source ~/.mutt/muttrc.mailboxes
