@@ -1,4 +1,4 @@
-install: install-bin install-vim install-shells install-xorg \
+install: install-bin install-vim install-zsh install-xorg \
 		 install-xmonad
 
 install-vim:
@@ -7,9 +7,7 @@ install-vim:
 	ln -s ~/.vim/vimrc ~/.vimrc
 	ln -s ~/.vim/vimrc.bepo ~/.vimrc.bepo
 
-install-shells: install-zsh install-inputrc
-
-install-zsh:
+install-zsh: install-inputrc
 	rm -fR ~/.zlogin ~/.zlogout ~/.zsh ~/.zshrc ~/.zshenv
 	ln -s `pwd`/zsh ~/.zsh
 	ln -s ~/.zsh/env ~/.zshenv
@@ -21,12 +19,16 @@ install-inputrc:
 	rm -fR ~/.inputrc
 	ln -s `pwd`/inputrc ~/.inputrc
 
-install-xorg:
+install-xorg: install-fonts
 	rm -fR ~/.Xdefaults ~/.xinitrc ~/.xinitrc.d ~/.colours
 	ln -s `pwd`/Xdefaults ~/.Xdefaults
 	ln -s `pwd`/xinitrc ~/.xinitrc
 	ln -s `pwd`/xinitrc.d ~/.xinitrc.d
 	ln -s `pwd`/colours ~/.colours
+
+install-fonts:
+	rm -fR ~/.fonts.conf
+	ln -s `pwd`/fonts.conf ~/.fonts.conf
 
 install-xmonad:
 	rm -fR ~/.xmonad ~/.dzen_conkyrc
@@ -35,3 +37,4 @@ install-xmonad:
 install-bin:
 	rm -fR ~/.bin
 	ln -s `pwd`/bin ~/.bin
+
