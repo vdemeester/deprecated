@@ -1,2 +1,0 @@
-#!/bin/zsh
-# Environment file
