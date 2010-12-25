@@ -4,7 +4,7 @@
 # vim:nu:ai:si:et:ts=4:sw=4:ft=sh
 # --------------------------------------
 # Load .Xdefaults
-xrdb -merge ~.Xdefaults
+xrdb -merge ~/.Xdefaults
 # Set Keyboard to bépo !
 setxkbmap fr bepo
 # Disable Capslock and map it to escape
@@ -42,4 +42,5 @@ if [ -d $HOME/.xinitrc.d ] ; then
     unset f
 fi
 # and start XMonad
-exec xmonad
+exec ck-launch-session xmonad
+#exec xmonad
