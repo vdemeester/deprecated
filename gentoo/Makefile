@@ -9,6 +9,7 @@ install-portage:
 	sudo ln -s `pwd`/portage/package.use /etc/portage/package.use
 	sudo ln -s `pwd`/portage/package.keywords /etc/portage/package.keywords
 	sudo ln -s `pwd`/portage/package.unmask /etc/portage/package.unmask
+	sudo ln -s `pwd`/portage/package.license /etc/portage/package.license 
 
 install-makeconf:
 	sudo rm -fR /etc/make.conf

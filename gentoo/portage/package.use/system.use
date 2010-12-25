@@ -6,6 +6,9 @@ app-laptop/tp_smapi hdaps
 sys-devel/gcc -gtk
 sys-apps/pcsc-lite usb
 # gentoo
+media-gfx/splashutils fbcondecor
+media-libs/jpeg static-libs
+media-libs/lcms static-libs
 sys-apps/portage build doc
 app-portage/eix tools doc sqlite
 app-admin/eselect doc
