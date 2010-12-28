@@ -1,42 +1,24 @@
-" vincent@demeester.fr
-" available at http://git.shortbrain.org/vincentconfigs.git
-
+" No VI compatibility
+set nocompatible
 " default encoding
 set encoding=utf-8
 set fileencoding=utf-8
-
-set nocompatible
 set history=600
-
 filetype plugin on
 "filetype indent on
-
 set foldenable
 set foldmethod=marker
 set foldcolumn=1
-
 set autoread
 colorscheme two2tango
 if !has("gui_running")
     set mouse=a
-	"colorscheme tango2
 endif
-" {{{
 if has("gui_running")
 	set guifont=Consolas\ 9
 	set guioptions=gitac
 	set foldcolumn=2
-
-	" Prefered Colorscheme
-	" Two2Tango 
-	" Bclear
-	" Jellybeans
-	" Tango2
-	" Wombat
-	" Dawn
-	"colorscheme two2tango
 endif
-" }}}
 set mousehide
 
 set nu
@@ -61,8 +43,8 @@ nmap <c-s> :w<CR>
 imap <c-s> <Esc>:w<CR>a
 nmap <leader>w :w!<CR>
 
-" listchar
-set listchars=nbsp:·,tab:»—,trail:¤,extends:>,precedes:<,eol:$
+" listchar	    
+set listchars=nbsp:·,tab:☞\ ,trail:¤,extends:>,precedes:<,eol:¬
 
 syntax enable
 " colorise les nbsp    

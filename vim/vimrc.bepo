@@ -2,7 +2,6 @@
 ""
 "" mapping du clavier bépo->qwerty en mode normal
 ""
- 
 " configuration des lettres
  
 noremap b q
