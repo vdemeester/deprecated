@@ -33,7 +33,7 @@ unclutter -idle 5 &
 # Start terminal emulation daemon
 urxvtd -q -o -f
 # Set the background (ugly right now, isn't it ?)
-feh --bg-scale ~/pictures/wallpapers/current.jpg 
+feh --bg-fill ~/pictures/wallpapers/current.jpg 
 # Autostart programs
 if [ -d $HOME/.xinitrc.d ] ; then
     for f in $HOME/.xinitrc.d/*.sh ; do
