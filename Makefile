@@ -1,8 +1,8 @@
 # Makefile for configs :)
 UNAME		 := $(shell uname)
 HOST		 := $(shell hostname -s)
-DISTRIB_FILE := $(shell ls -d /etc/*[-_]{version,release} 2>/dev/null)
-DISTRIB_NAME := $(shell cat ${DISTRIB_FILE})
+#DISTRIB_FILE := $(shell ls -d /etc/*[-_]{version,release} 2>/dev/null)
+#DISTRIB_NAME := $(shell cat ${DISTRIB_FILE})
 # Find a tool to read/understant the content of DISTRIB_FILE
 
 uname_targets = $(addprefix install-uname-,$(UNAME))
@@ -13,7 +13,7 @@ install: echo install-common ${uname_targets} ${host_targets}
 echo:
 	@echo Installing configuration files
 	@echo ">> Uname    : ${UNAME}"
-	@echo ">> Distrib. : ${DISTRIB_NAME}"
+#	@echo ">> Distrib. : ${DISTRIB_NAME}"
 	@echo ">> Host     : ${HOST}"
 	@echo ""
 
