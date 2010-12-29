@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/vincent/Sources/sbr.me'
-let g:netrw_dirhist_2='/home/vincent/Sources/sbr.me/content'
-let g:netrw_dirhist_3='/home/vincent/Sources/sbr.me/content/styles'
