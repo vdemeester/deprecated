@@ -18,7 +18,7 @@ URxvt.cursorBlink: true
 URxvt.transparent: 0
 URxvt.title: Terminal
 
-URxvt.internalBorder: 2
+!URxvt.internalBorder: 2
 
 URxvt*scrollBar_right: false
 URxvt*scrollBar: false
@@ -35,6 +35,9 @@ URxvt.boldFont:xft:monospace:bold:pixelsize=12
 !URxvt.font:     -*-terminus-medium-r-*-*-16-*-*-*-*
 !URxvt.boldFont: -*-terminus-medium-r-*-*-16-*-*-*-*
 
+URxvt*inheritPixmap: true
+URxvt*tintColor: white
+URxvt*shading: 8
 URxvt*termName: xterm-256color
 
 #include "/home/vincent/.colours/soft"
