@@ -4,6 +4,9 @@ x11-base/xorg-server ~amd64
 x11-base/xorg-drivers ~amd64
 dev-python/fabric ~amd64
 dev-python/pip ~amd64
+dev-python/tox
+dev-python/py
+dev-python/keyring
 dev-util/gtk-doc ~amd64
 app-text/par
 media-libs/libmpdclient
