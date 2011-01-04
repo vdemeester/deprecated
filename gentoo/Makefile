@@ -1,7 +1,7 @@
 # Gentoo specific Makefile
 #
 
-install: install-portage install-makeconf
+install: install-portage
 
 install-portage:
 	@echo ">>>> Gentoo Portage linking"
