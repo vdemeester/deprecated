@@ -30,8 +30,10 @@ x11-misc/dzen ~amd64
 x11-misc/dmenu ~amd64
 media-gfx/splash-themes-gentoo
 =www-client/firefox-4.0_beta8_pre-r9 ~amd64
-app-emulation/qemu-kvm
+=www-client/firefox-4.0_beta9_pre-r2
 =net-libs/xulrunner-2.0_beta8_pre-r9 ~amd64
+=net-libs/xulrunner-2.0_beta9_pre-r2
+=dev-db/sqlite-3.7.3
 =media-libs/libpng-1.4.4 ~amd64
 x11-libs/cairo ~amd64
 x11-libs/pixman ~amd64
