@@ -7,3 +7,4 @@ net-wireless/ipw3945-ucode ipw3945
 net-wireless/iwl3945-ucode ipw3945
 net-wireless/ipw3945d ipw3945
 dev-java/groovy codehaus-groovy
+app-emulation/emul-linux-x86-xlibs MOTIF
