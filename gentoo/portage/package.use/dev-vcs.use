@@ -1,5 +1,5 @@
 dev-vcs/git doc cvs subversion
 dev-vcs/subversion doc ctypes-python extras -dso
-dev-vcs/darcs doc
+dev-vcs/darcs
 dev-vcs/bzr doc
 
