@@ -1,2 +1,5 @@
-gnome-base/gvfs fuse
+gnome-base/gvfs fuse archive gphoto2 samba
+sys-apps/gnome-disk-utility fat nautilus
+gnome-base/nautilus xmp gnome
 net-misc/vinagre -telepathy
+

@@ -1,4 +1,5 @@
 dev-texlive/texlive-fontsextra nosell
+dev-util/android-sdk-update-manager android
 media-fonts/corefonts MSttfEULA
 dev-java/jta sun-bcla-jta
 app-arch/unrar unRAR

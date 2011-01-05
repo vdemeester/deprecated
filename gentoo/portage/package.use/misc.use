@@ -4,3 +4,4 @@ app-admin/conky moc mpd thinkpad wifi
 app-office/libreoffice-bin gnome
 app-editor/vim ruby vim-pager
 app-editor/gvim ruby vim-pager
+app-arch/libarchive xattr

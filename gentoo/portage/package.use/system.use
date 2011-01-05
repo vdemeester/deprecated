@@ -1,4 +1,5 @@
 sys-fs/udev extras
+sys-block/parted device-mapper
 sys-auth/pambase ssh
 app-admin/sudo offensive
 app-laptop/tp_smapi hdaps
