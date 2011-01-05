@@ -38,6 +38,11 @@ install-vim:
 	ln -s ~/.vim/vimrc ~/.vimrc
 	ln -s ~/.vim/vimrc.bepo ~/.vimrc.bepo
 
+install-pentadactyl:
+	@echo ">>> pentadactyl linking"
+	rm ~/.pentadactylrc
+	ln -s `pwd`/pentadactylrc ~/.pentadactylrc
+
 install-zsh: install-inputrc
 	@echo ">>> zsh linking"
 	rm -fR ~/.zlogin ~/.zlogout ~/.zsh ~/.zshrc ~/.zshenv
