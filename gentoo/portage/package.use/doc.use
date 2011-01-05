@@ -1,7 +1,7 @@
 # misc
 app-text/docbook-sgml-utils jadetex
 app-text/lcdf-typetools kpathsea
-app-text/evince djvu dvi t1lib
+app-text/evince djvu dvi t1lib nautilus
 # latex
 app-text/texlive doc extra graphics latex3 xetex context
 dev-texlive/texlive-xetex doc
