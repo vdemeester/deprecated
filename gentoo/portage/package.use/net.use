@@ -1,11 +1,13 @@
 # lib
-net-libs/xulrunner system-sqlite
+net-libs/xulrunner system-sqlite custom-optimization
 # mail
 mail-mta/msmtp doc
 net-mail/offlineimap doc
 mail-client/mutt doc imap idn nntp pop sasl sidebar smime smtp tokyocabinet
+mail-client/thunderbird custom-optimization ldap system-sqlite
+x11-plugins/enigmail custom-optimization system-sqlite
 # web
-www-client/firefox system-sqlite
+www-client/firefox system-sqlite custom-optimization
 www-client/elinks finger idn ftp
 # vpn
 net-misc/openvpn pkcs11
