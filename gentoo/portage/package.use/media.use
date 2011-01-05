@@ -4,6 +4,7 @@ media-libs/freetype kpathsea
 media-libs/gd fontconfig
 media-libs/libpng apng
 media-libs/libvpx -doc
+media-libs/libgphoto2 exif
 # sound
 media-sound/mpd -lame ao cue mikmod musepack
 media-sound/moc wavpack aac ffmpeg libsamplerate modplug musepack speex

@@ -1,4 +1,5 @@
 #app-text/texlive ~amd64
+dev-util/android-sdk-update-manager
 sys-fs/udev **
 x11-base/xorg-server ~amd64
 x11-base/xorg-drivers ~amd64
