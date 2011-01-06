@@ -1,5 +1,6 @@
 # lib
 net-libs/xulrunner system-sqlite custom-optimization
+net-libs/webkit-gtk -gstreamer
 # mail
 mail-mta/msmtp doc
 net-mail/offlineimap doc

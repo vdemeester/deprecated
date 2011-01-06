@@ -5,6 +5,7 @@ media-libs/gd fontconfig
 media-libs/libpng apng
 media-libs/libvpx -doc
 media-libs/libgphoto2 exif
+media-gfx/gimp exif mng pdf wmf webkit
 # sound
 media-sound/mpd -lame ao cue mikmod musepack
 media-sound/moc wavpack aac ffmpeg libsamplerate modplug musepack speex
