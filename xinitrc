@@ -41,8 +41,10 @@ if [ -d $HOME/.xinitrc.d ] ; then
     done
     unset f
 fi
-if [[ -f /usr/bin/synergys && -f $HOME/.synergy.conf ]]; then
-    /usr/bin/synergys --config $HOME/.synergy.conf
+if [[ -f /usr/bin/synergys && -f $HOME/.synergy.server.conf ]]; then
+    /usr/bin/synergys --config $HOME/.synergy.server.conf
+elif [[ -f /usr/bin/synergyc && -f $HOME/.synergy.client.conf ]]; then
+    /usr/bin/synergyc # TODO: Content of $HOME/.synergy.client.conf
 fi
 # and start XMonad
 exec ck-launch-session xmonad
