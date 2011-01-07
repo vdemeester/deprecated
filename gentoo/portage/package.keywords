@@ -1,6 +1,8 @@
 #app-text/texlive ~amd64
 dev-util/android-sdk-update-manager
 =media-libs/libpng-1.4.5
+www-servers/jetty
+dev-java/swt
 sys-fs/udev **
 x11-base/xorg-server ~amd64
 x11-base/xorg-drivers ~amd64
