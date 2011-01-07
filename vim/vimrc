@@ -87,6 +87,7 @@ set hlsearch
 
 " Status line
 set laststatus=2
+set statusline=%f\ %m\ %h%r%=[%{&encoding}\ %{&fileformat}\ %{strlen(&ft)?&ft:'none'}\ %{getfperm(@%)}]\ 0x%B\ %12.(%c:%l/%L%)
 
 """"""""""""""""""""""""""""""
 " Visual
