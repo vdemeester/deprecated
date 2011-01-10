@@ -4,8 +4,8 @@ dev-util/android-sdk-update-manager
 www-servers/jetty
 dev-java/swt
 sys-fs/udev **
-x11-base/xorg-server ~amd64
-x11-base/xorg-drivers ~amd64
+=x11-base/xorg-server-1.9.2.902
+=x11-base/xorg-drivers-1.9
 dev-python/fabric ~amd64
 dev-python/pip ~amd64
 dev-python/tox
@@ -33,9 +33,7 @@ x11-wm/xmonad-contrib ~amd64
 x11-misc/dzen ~amd64
 x11-misc/dmenu ~amd64
 media-gfx/splash-themes-gentoo
-=www-client/firefox-4.0_beta8_pre-r9 ~amd64
 =www-client/firefox-4.0_beta9_pre-r2
-=net-libs/xulrunner-2.0_beta8_pre-r9 ~amd64
 =net-libs/xulrunner-2.0_beta9_pre-r2
 =dev-db/sqlite-3.7.3
 =media-libs/libpng-1.4.4 ~amd64
