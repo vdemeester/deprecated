@@ -1,6 +1,7 @@
 # base
 x11-base/xorg-server -hal
 # libs
+x11-libs/cairo drm 
 # tools
 x11-misc/dzen xpm
 x11-terms/rxvt-unicode 256-color afterimage unicode3 font-styles blink fading-colors iso14755
