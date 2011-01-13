@@ -1,4 +1,6 @@
 #app-text/texlive ~amd64
+dev-db/mysql-workbench
+dev-cpp/ctemplate
 dev-util/android-sdk-update-manager
 =media-libs/libpng-1.4.5
 www-servers/jetty
