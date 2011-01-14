@@ -1,6 +1,10 @@
 #app-text/texlive ~amd64
 dev-db/mysql-workbench
 dev-cpp/ctemplate
+app-emulation/virtualbox
+app-emulation/virtualbox-modules
+app-emulation/virtualbox-additions
+app-emulation/virtualbox-extpack-oracle
 dev-util/android-sdk-update-manager
 =media-libs/libpng-1.4.5
 www-servers/jetty
