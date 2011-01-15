@@ -28,7 +28,7 @@ import org.apache.commons.lang.StringUtils;
  */
 public class Reflect {
 
-  protected static final Set<String> defaultHiddenFields = new HashSet<String>(
+  public static final Set<String> defaultHiddenFields = new HashSet<String>(
 			Arrays.asList(new String[] { "log", "serialVersionUID" }));
 
 	/**
