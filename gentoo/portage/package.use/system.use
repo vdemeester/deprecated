@@ -4,6 +4,7 @@ sys-auth/pambase ssh
 app-admin/sudo offensive
 app-laptop/tp_smapi hdaps
 app-emulation/virtualbox extensions
+dev-libs/libgcrypt static-libs
 # gtk for gcc ?
 sys-devel/gcc gtk doc gcj
 sys-apps/pcsc-lite usb
