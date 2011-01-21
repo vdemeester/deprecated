@@ -3,7 +3,7 @@ sys-block/parted device-mapper
 sys-auth/pambase ssh
 app-admin/sudo offensive
 app-laptop/tp_smapi hdaps
-app-emulation/virtualbox extensions
+app-emulation/virtualbox extensions vnc qt4 
 # gtk for gcc ?
 sys-devel/gcc gtk doc gcj
 sys-apps/pcsc-lite usb
