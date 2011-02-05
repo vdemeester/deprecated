@@ -6,7 +6,7 @@
 	<artifactId>org.shortbrain.util</artifactId>
 	<name>shortbrain util class</name>
 	<packaging>jar</packaging>
-	<version>0.1.1</version>
+	<version>0.1.2</version>
 	<properties>
 		<commons.collections.version>3.2.1</commons.collections.version>
 		<commons.lang.version>2.4</commons.lang.version>
