@@ -387,7 +387,6 @@ public class Reflect {
 	 * @throws DaoException
 	 *             the dao exception
 	 */
-	@SuppressWarnings("rawtypes")
 	public static Object getValue(String fieldName, Object object)
 			throws ReflectionException {
 		Object o = null;
