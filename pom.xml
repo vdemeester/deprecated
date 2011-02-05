@@ -52,4 +52,8 @@
 			</plugin>
 		</plugins>
 	</build>
+	<scm>
+		<connection>scm:git:git://github.com/vdemeester/org.shortbrain.util.git</connection>
+		<developerConnection>scm:git:git@github.com:vdemeester/org.shortbrain.util.git</developerConnection>
+	</scm>
 </project>
