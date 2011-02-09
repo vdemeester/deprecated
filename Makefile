@@ -22,7 +22,7 @@ install-uname-Linux: install-xorg install-xmonad install-bin
 install-uname-Darwin: 
 
 install-host-kyushu:
-	@cd gentoo; $(MAKE) install
+#	@cd gentoo; $(MAKE) install
 
 install-host-gohei:
 
