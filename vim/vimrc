@@ -10,7 +10,7 @@ set foldenable
 set foldmethod=marker
 set foldcolumn=1
 set autoread
-colorscheme two2tango
+" colorscheme two2tango
 if !has("gui_running")
     set mouse=a
 endif
@@ -18,7 +18,12 @@ if has("gui_running")
 	set guifont=Consolas\ 9
 	set guioptions=gitac
 	set foldcolumn=2
+	set background=light
+else
+	set background=dark
 endif
+colorscheme solarized
+set cursorline
 set mousehide
 
 set nu
