@@ -16,7 +16,7 @@ if !has("gui_running")
 endif
 if has("gui_running")
 	set guifont=Consolas\ 9
-	set guioptions=gitac
+	set guioptions=gitace
 	set foldcolumn=2
 	set background=light
 else
