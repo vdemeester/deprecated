@@ -1,4 +1,8 @@
 " No VI compatibility
+filetype off 
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+
 set nocompatible
 " default encoding
 set encoding=utf-8
@@ -34,8 +38,9 @@ set wildignore=.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.
 set su=.h,.bak,~,.o,.info,.swp,.obj
 
 "mapleader 
-let mapleader = ","
-let g:mapleader = ","
+let mapleader = "_"
+let g:mapleader = "_"
+
 " fast reloading & editing
 map <leader>s :source ~/.vimrc<cr>
 map <leader>e :e! ~/.vimrc<cr>
