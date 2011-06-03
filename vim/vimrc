@@ -1,4 +1,11 @@
+" File: vimrc
+" Author: Vincent Demeester
+" Description: File
+" Last Modified: June 03, 2011
 " No VI compatibility
+
+source ~/.vimrc.bepo
+
 filetype off 
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
@@ -38,8 +45,9 @@ set wildignore=.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.
 set su=.h,.bak,~,.o,.info,.swp,.obj
 
 "mapleader 
-let mapleader = "_"
-let g:mapleader = "_"
+let mapleader = ","
+let g:mapleader = ","
+nnoremap <Leader><Leader> <Leader>
 
 " fast reloading & editing
 map <leader>s :source ~/.vimrc<cr>
@@ -243,9 +251,8 @@ au BufNewFile,BufRead *.todo setf taskpaper
 autocmd BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
 autocmd BufRead *.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
 au BufRead,BufNewFile *.vala            setfiletype vala
-au BufRead,BufNewFile *.vapi            setfiletype vala
+au BufRead,BufNewFile *.vapi            setfietype vala
 
 " BÉPO power
-source ~/.vimrc.bepo
 
 " vim: set foldmethod=marker 

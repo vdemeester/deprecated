@@ -79,8 +79,7 @@ noremap H >
 noremap F ?
  
 " configuration du copié sur le ç car y est sur la touche composé ^
- 
-noremap ç y
+"noremap ç y
  
 " configuration des nombres
  
