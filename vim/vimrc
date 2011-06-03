@@ -2,14 +2,12 @@
 " Author: Vincent Demeester
 " Description: File
 " Last Modified: June 03, 2011
-" No VI compatibility
-
-source ~/.vimrc.bepo
 
 filetype off 
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
+" No vi compatibility
 set nocompatible
 " default encoding
 set encoding=utf-8
@@ -47,6 +45,7 @@ set su=.h,.bak,~,.o,.info,.swp,.obj
 "mapleader 
 let mapleader = ","
 let g:mapleader = ","
+
 nnoremap <Leader><Leader> <Leader>
 
 " fast reloading & editing
@@ -72,11 +71,6 @@ match NbSp /\%xa0/
 " Default --> tab width & co
 set tabstop=4
 set shiftwidth=4
-
-" Syntax switch
-map <leader>h :set syntax=html<cr>
-map <leader>j :set syntax=javascript<cr>
-map <leader>c :set syntax=css<cr>
 
 " Fileformat
 set ffs=unix,dos,mac
@@ -141,11 +135,6 @@ endtry
 
 " Switch current dir (file ? Yep boy !!)
 map <leader>cd :cd %:p:h<cr>
-
-" Map auto complete of (, [, {
-inoremap $1 ()<esc>:let leavechar=")"<cr>i
-inoremap $2 []<esc>:let leavechar="]"<cr>i
-inoremap $3 {}<esc>:let leavechar="}"<cr>i
 
 " Abbrevs
 iab xname Vincent Demeester
@@ -213,12 +202,9 @@ noremap <S-Tab> zA
 vnoremap < <gv
 vnoremap > >gv
 
-" Filetype related
-
-" {{{
-" Python
+" Filetype related {{{
+" Python {{{
 autocmd FileType python map <buffer> <leader><space> :w!<cr>:!python %<cr>
-" autocmd FileType python so ~/vim_local/plugin/python_fold.vim
 autocmd FileType python set tabstop=4
 autocmd FileType python set shiftwidth=4
 autocmd FileType python set expandtab
@@ -229,30 +215,13 @@ autocmd FileType python set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%
 
 " Python iMaps
 au FileType python set cindent
-au FileType python inoremap <buffer> $r return
-au FileType python inoremap <buffer> $s self
-au FileType python inoremap <buffer> $c ##<cr>#<space><cr>#<esc>kla
-au FileType python inoremap <buffer> $i import
-au FileType python inoremap <buffer> $p print
-au FileType python inoremap <buffer> $d """<cr>"""<esc>O
-
 autocmd FileType vim set nofen
-
 " }}}
-" * Html
+
+" * Html {{{
 autocmd FileType html set tabstop=4
 autocmd FileType html set shiftwidth=4
 autocmd FileType html set expandtab
-
-" TODO/Taskpaper
-au BufNewFile,BufRead *.todo setf taskpaper
-
-" Vala filetype
-autocmd BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
-autocmd BufRead *.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
-au BufRead,BufNewFile *.vala            setfiletype vala
-au BufRead,BufNewFile *.vapi            setfietype vala
-
-" BÉPO power
-
+" }}}
+" }}}
 " vim: set foldmethod=marker 
