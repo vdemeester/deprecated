@@ -29,7 +29,7 @@ install-host-gohei:
 install-host-vinssento.home:
 
 # Commons rules
-install-common: install-vim install-zsh install-git
+install-common: install-vim install-zsh
 
 install-vim:
 	@echo ">>> vim linking"
@@ -51,6 +51,11 @@ install-zsh: install-inputrc
 	ln -s ~/.zsh/login ~/.zlogin
 	ln -s ~/.zsh/logout ~/.zlogout
 	ln -s ~/.zsh/rc ~/.zshrc
+
+install-dircolors: install-inputrc
+	@echo ">>> dircolors linking"
+	rm -fR ~/.dircolors
+	ln -s `pwd`/dircolors ~/.dircolors
 
 install-git:
 	@echo ">>> git(config) linking"
