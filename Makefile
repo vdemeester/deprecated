@@ -43,7 +43,7 @@ install-pentadactyl:
 	rm ~/.pentadactylrc
 	ln -s `pwd`/pentadactylrc ~/.pentadactylrc
 
-install-zsh: install-inputrc
+install-zsh: install-inputrc install-dircolors
 	@echo ">>> zsh linking"
 	rm -fR ~/.zlogin ~/.zlogout ~/.zsh ~/.zshrc ~/.zshenv
 	ln -s `pwd`/zsh ~/.zsh
@@ -52,7 +52,7 @@ install-zsh: install-inputrc
 	ln -s ~/.zsh/logout ~/.zlogout
 	ln -s ~/.zsh/rc ~/.zshrc
 
-install-dircolors: install-inputrc
+install-dircolors:
 	@echo ">>> dircolors linking"
 	rm -fR ~/.dircolors
 	ln -s `pwd`/dircolors ~/.dircolors
