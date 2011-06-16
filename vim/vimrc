@@ -2,12 +2,8 @@
 " Author: Vincent Demeester
 " Description: File
 " Last Modified: June 03, 2011
+runtime pathogen_init
 
-filetype off 
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
-
-" No vi compatibility
 set nocompatible
 " default encoding
 set encoding=utf-8
@@ -227,4 +223,8 @@ autocmd FileType html set shiftwidth=4
 autocmd FileType html set expandtab
 " }}}
 " }}}
+let hostfile=$HOME . '/.vim/vimrc-' . hostname()
+if filereadable(hostfile)
+	exe 'source ' . hostfile
+endif
 " vim: set foldmethod=marker 
