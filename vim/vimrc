@@ -20,10 +20,7 @@ if !has("gui_running")
     set mouse=a
 endif
 if has("gui_running")
-	set guifont=Consolas\ 9
-	if hostname() == 'gohei'
-		set guifont=Monospace\ 9
-	endif
+	set guifont=Monospace\ 9
 	set guioptions=gitace
 	set foldcolumn=2
 	set background=light
@@ -33,6 +30,10 @@ endif
 colorscheme solarized
 set cursorline
 set mousehide
+
+if v:version > '702'
+	set colorcolumn=80,120
+endif
 
 set nu
 set wildmenu
