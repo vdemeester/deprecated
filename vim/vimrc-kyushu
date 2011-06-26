@@ -1,5 +1,5 @@
 " force terminal to use 256 colors
 set t_Co=256
 if has("gui_running")
-	set guifont=Inconsolata-dz\ 8
+	set guifont=Inconsolata-dz\ 9
 endif
