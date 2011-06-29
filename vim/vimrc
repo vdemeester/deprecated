@@ -9,14 +9,14 @@ set history=600
 filetype plugin on
 "filetype indent on
 if has("gui_running")
-	" Set default font. Should be override in local config
-	set guifont=Monospace\ 9
-	set guioptions=gitace
-	set foldcolumn=2
-	set background=light
+    " Set default font. Should be override in local config
+    set guifont=Monospace\ 9
+    set guioptions=gitace
+    set foldcolumn=2
+    set background=light
 else
-	set background=dark
-	set mouse=a
+    set background=dark
+    set mouse=a
 endif
 " Colorscheme for both dark and light background
 colorscheme solarized
@@ -24,7 +24,7 @@ set cursorline
 set mousehide
 
 if v:version > '702'
-	set colorcolumn=80,120
+    set colorcolumn=80,120
 endif
 
 set wildmenu
@@ -47,8 +47,9 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 autocmd! bufwritepost .gvimrc source ~/.gvimrc
 
 nmap <leader>w :w!<CR>
+nmap <leader>l :set list!<CR>
 
-" listchar	    
+" listchar      
 set listchars=nbsp:·,tab:☞\ ,trail:¤,extends:>,precedes:<,eol:¬
 
 syntax enable
@@ -135,8 +136,14 @@ set fdl=0
 vnoremap < <gv
 vnoremap > >gv
 
+" tabs default stuff
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
 let hostfile=$HOME . '/.vim/vimrc-' . hostname()
 if filereadable(hostfile)
-	exe 'source ' . hostfile
+    exe 'source ' . hostfile
 endif
 " vim: set foldmethod=marker
