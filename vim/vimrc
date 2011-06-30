@@ -40,11 +40,10 @@ let g:mapleader = ","
 nnoremap <Leader><Leader> <Leader>
 
 " fast reloading & editing
-map <leader>s :source ~/.vimrc<cr>
-map <leader>e :e! ~/.vimrc<cr>
+map <leader>s :source $MYVIMRC<cr>
+map <leader>e :e! $MYVIMRC<cr>
 " When .vimrc is editited, reoad it automatically
-autocmd! bufwritepost .vimrc source ~/.vimrc
-autocmd! bufwritepost .gvimrc source ~/.gvimrc
+autocmd! bufwritepost .vimrc source $MYVIMRC
 
 nmap <leader>w :w!<CR>
 nmap <leader>l :set list!<CR>
