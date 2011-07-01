@@ -650,7 +650,7 @@ xkb_symbols "bepo-sbr" {
     key <AD12> { [ dead_diaeresis, dead_abovedot, dead_breve, VoidSymbol] };
     key <AC02> { [ u, U, bracketleft, Ugrave] }; // u U [ Ù
     key <AC03> { [ i, I, bracketright, dead_abovedot ] }; // i I ] ˙
-    key <AB01> { [ z, Z, braceright, rightsinglequotemark] };
+    key <AB01> { [ z, Z, backslash, rightsinglequotemark] };
 };
 
 // Author   : Francis Leboutte, http://www.algo.be/ergo/dvorak-fr.html
