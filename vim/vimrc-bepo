@@ -1,0 +1,16 @@
+
+""
+"" mapping du clavier bépo->qwerty en mode normal
+""
+" configuration des lettres
+ 
+noremap c h
+noremap t j
+noremap s k
+noremap r l
+
+noremap j t
+noremap h c
+noremap k s
+noremap k s
+noremap l r
