@@ -1,28 +1,45 @@
+" .vimrc file of Vincent Demeester
+" I tried to comment it as much as I could.
+"
 " Load pathogen (if present)
+" This has to be before filetype plugin on as pathogen won't work then.
 runtime pathogen_init
-" No VI mode around (right ?)
+" Drop compatibility
 set nocompatible
-" default encoding
+
+" Set default encoding to utf-8
 set encoding=utf-8
 set fileencoding=utf-8
+" Remembering the 600 last command. Vim default is 20.
 set history=600
+" Enable filetype detection.
 filetype plugin on
 "filetype indent on
 if has("gui_running")
-    " Set default font. Should be override in local config
-    set guifont=Monospace\ 9
-    set guioptions=gitace
+    " Simple GUI, almost similar to console version
+    " i > Use Vim icon
+    " t > tearoff menu items. TODO learn what it means
+    " a > autoselect (means that vim might try to share selection with system.
+    " c > Use console dialogs
+    set guioptions=itac
+    " allocate 2 pixels for folding column (even if no folding present)
     set foldcolumn=2
+    " Light background on GUI version
     set background=light
 else
+    " Dark background on CLI version (as terminal background usually dark)
     set background=dark
+    " Enable mouse support in CLI
     set mouse=a
 endif
 " Colorscheme for both dark and light background
 colorscheme solarized
+" Hightlight the line where the cursor is.
 set cursorline
+" Hide the mouse when writing/using vim (who needs a mouse anyway !)
 set mousehide
 
+" Highlight column that are listed (80 and 120)
 if v:version > '702'
     set colorcolumn=80,120
 endif
@@ -33,7 +50,7 @@ set wildignore=.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.
 " some filetypes got lower priority
 set su=.h,.bak,~,.o,.info,.swp,.obj
 
-"mapleader 
+" Remaping mapleader (default is \)
 let mapleader = ","
 let g:mapleader = ","
 
@@ -42,11 +59,13 @@ nnoremap <Leader><Leader> <Leader>
 " fast reloading & editing
 map <leader>s :source $MYVIMRC<cr>
 map <leader>e :e! $MYVIMRC<cr>
+
 " When .vimrc is editited, reoad it automatically
 autocmd! bufwritepost .vimrc source $MYVIMRC
 
 nmap <leader>w :w!<CR>
 nmap <leader>l :set list!<CR>
+nmap <leader>n :set nu!<CR>
 
 " listchar      
 set listchars=nbsp:·,tab:☞\ ,trail:¤,extends:>,precedes:<,eol:¬
@@ -145,4 +164,6 @@ let hostfile=$HOME . '/.vim/vimrc-' . hostname()
 if filereadable(hostfile)
     exe 'source ' . hostfile
 endif
+" FIXME detect bepo keymap ?
+exe 'source $HOME/.vim/vimrc-bepo'
 " vim: set foldmethod=marker
