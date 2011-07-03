@@ -12,6 +12,13 @@ set encoding=utf-8
 set fileencoding=utf-8
 " Remembering the 600 last command. Vim default is 20.
 set history=600
+" Backup & Swap file
+" The point here is : tell vim not to write this kind of file in the current 
+" folder (and even deactivate it if possible).
+set nobackup
+set nowb
+set noswapfile
+
 " Enable filetype detection.
 filetype plugin on
 "filetype indent on
@@ -38,34 +45,66 @@ colorscheme solarized
 set cursorline
 " Hide the mouse when writing/using vim (who needs a mouse anyway !)
 set mousehide
+" Set Mininal screen lines above/below the cursor
+set scrolloff=5
+" Do not forbid switching buffer in case of modified buffer
+set hidden
+" Enable all backspace stuff 
+set backspace=eol,start,indent
+" Show matches when typing the pattern
+set incsearch
+" Ignore case by default in search
+" Possible to re-enabling it using \C in the search pattern
+set ignorecase
+" Highlight matches of search by default - use :nohlsearch for hiding it
+set hlsearch
+" Magic mode (in pattern matching)
+" Possible to disable it using \M (read help for more informations)
+set magic
+" Show the matche pair (for(,[,{,<,…)
+set showmatch
+" Always show the statusline and commandline
+set laststatus=2
+" Change the default statusline
+set statusline=%f\ %m\ %h%r%=[%{&encoding}\ %{&fileformat}\ %{strlen(&ft)?&ft:'none'}\ %{getfperm(@%)}]\ 0x%B\ %12.(%c:%l/%L%)
 
 " Highlight column that are listed (80 and 120)
 if v:version > '702'
     set colorcolumn=80,120
 endif
 
+" Enhancing command-line completion (with options)
 set wildmenu
 set wildmode=list:longest,list:full
 set wildignore=.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.pyc,*~
 " some filetypes got lower priority
 set su=.h,.bak,~,.o,.info,.swp,.obj
 
+" Set tab/space default behvior. The rest is going to be set by filetype
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
 " Remaping mapleader (default is \)
 let mapleader = ","
 let g:mapleader = ","
 
-nnoremap <Leader><Leader> <Leader>
-
-" fast reloading & editing
+" fast reloading & editing .vimrc file
 map <leader>s :source $MYVIMRC<cr>
 map <leader>e :e! $MYVIMRC<cr>
-
 " When .vimrc is editited, reoad it automatically
 autocmd! bufwritepost .vimrc source $MYVIMRC
 
+" Quick access to useful funtions
+" - Quick saving
 nmap <leader>w :w!<CR>
+" - Toogle typo characters
 nmap <leader>l :set list!<CR>
+" - Toogle line numbers
 nmap <leader>n :set nu!<CR>
+" - Quick change directory
+map <leader>cd :cd %:p:h<cr>
 
 " listchar      
 set listchars=nbsp:·,tab:☞\ ,trail:¤,extends:>,precedes:<,eol:¬
@@ -79,28 +118,6 @@ match NbSp /\%xa0/
 set ffs=unix,dos,mac
 nmap <leader>fd :se ff=dos<cr>
 nmap <leader>fu :se ff=unix<cr>
-
-" Vim user interface
-" Set 7 lines to the cursor
-set so=5
-
-" You can change buffer without saving the current
-set hid
-set backspace=eol,start,indent
-
-"set whichwrap+=<,>,h "?
-
-" search
-set incsearch
-set ignorecase
-" and the magic
-set magic "?
-set showmatch
-set hlsearch
-
-" Status line
-set laststatus=2
-set statusline=%f\ %m\ %h%r%=[%{&encoding}\ %{&fileformat}\ %{strlen(&ft)?&ft:'none'}\ %{getfperm(@%)}]\ 0x%B\ %12.(%c:%l/%L%)
 
 """"""""""""""""""""""""""""""
 " Visual
@@ -124,46 +141,17 @@ endfunction
 vnoremap <silent> * :call VisualSearch('f')<CR>
 vnoremap <silent> # :call VisualSearch('b')<CR>
 
-" Switch current dir (file ? Yep boy !!)
-map <leader>cd :cd %:p:h<cr>
-
-" Abbrevs 
-" TODO Move them elsewhere
-iab xname Vincent Demeester
-iab xmail vincent@demeester.fr
-iab xdate <c-r>=strftime("%d/%m/%Y %H:%M:%S")<cr>
-
-"Quick find & switch to buffer
-map <c-q> :sb 
-map <leader>q :e ~/buffer<cr>
-
 "Restore cursor to file position in previous editing session
 set viminfo='10,\"100,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
-
-" Turn backup off
-set nobackup
-set nowb
-set noswapfile
-
-" folding
-set nofen
-set fdl=0
 
 " keep the current selection when indenting (thanks cbus)
 vnoremap < <gv
 vnoremap > >gv
 
-" tabs default stuff
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-
+" Finaly source `hostname` specific configuration file if existing
 let hostfile=$HOME . '/.vim/vimrc-' . hostname()
 if filereadable(hostfile)
     exe 'source ' . hostfile
 endif
-" FIXME detect bepo keymap ?
-exe 'source $HOME/.vim/vimrc-bepo'
 " vim: set foldmethod=marker
