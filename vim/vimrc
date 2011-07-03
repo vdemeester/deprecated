@@ -67,7 +67,7 @@ set showmatch
 " Always show the statusline and commandline
 set laststatus=2
 " Change the default statusline
-set statusline=%f\ %m\ %h%r%=[%{&encoding}\ %{&fileformat}\ %{strlen(&ft)?&ft:'none'}\ %{getfperm(@%)}]\ 0x%B\ %12.(%c:%l/%L%)
+set statusline=%f\ %m\ %{fugitive#statusline()}\ %h%r%=[%{&encoding}\ %{&fileformat}\ %{strlen(&ft)?&ft:'none'}\ %{getfperm(@%)}]\ 0x%B\ %12.(%c:%l/%L%)
 
 " Highlight column that are listed (80 and 120)
 if v:version > '702'
@@ -111,6 +111,11 @@ nmap <leader>u :GundoToggle<cr>
 " Customization : Preview pane (diff) at the bottom of the current buffer
 let g:gundo_preview_bottom = 1
 
+" Customize fugitive
+if has("autocmd")
+    autocmd BufReadPost fugitive://* set bufhidden=delete
+endif
+
 " listchar      
 set listchars=nbsp:·,tab:☞\ ,trail:¤,extends:>,precedes:<,eol:¬
 
@@ -145,10 +150,6 @@ endfunction
 "Basically you press * or # to search for the current selection !! Really useful
 vnoremap <silent> * :call VisualSearch('f')<CR>
 vnoremap <silent> # :call VisualSearch('b')<CR>
-
-"Restore cursor to file position in previous editing session
-"set viminfo='10,\"100,:20,%,n~/.viminfo
-"au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
 " keep the current selection when indenting (thanks cbus)
 vnoremap < <gv
