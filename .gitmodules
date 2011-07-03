@@ -7,3 +7,6 @@
 [submodule "vim/bundle/snipmate-vim"]
 	path = vim/bundle/snipmate-vim
 	url = git://github.com/msanders/snipmate.vim.git
+[submodule "vim/bundle/gundo"]
+	path = vim/bundle/gundo
+	url = git://github.com/sjl/gundo.vim.git
