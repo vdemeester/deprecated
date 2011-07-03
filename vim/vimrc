@@ -20,8 +20,9 @@ set nowb
 set noswapfile
 
 " Enable filetype detection.
+filetype on
 filetype plugin on
-"filetype indent on
+filetype indent on
 if has("gui_running")
     " Simple GUI, almost similar to console version
     " i > Use Vim icon
