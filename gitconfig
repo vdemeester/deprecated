@@ -1,6 +1,6 @@
 [user]
 	name = Vincent Demeester
-	email = ***
+	email = ********************
 [alias]
 	co = checkout
 	st = status
@@ -11,14 +11,14 @@
 	diff = auto
 	status = auto
 [color "branch"]
-	current = yellow reverse
-	local = yellow
+	current = white reverse
+	local = white 
 	remote = green
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+	meta = white
+	frag = magenta reverse
+	old = red 
+	new = green 
 [color "status"]
 	added = green
 	changed = yellow
@@ -31,5 +31,5 @@
 [gui]
 	editor = gvim
 [github]
-	user = vdemeester
-	token = ***
+	user = **********
+	token = ***************************
