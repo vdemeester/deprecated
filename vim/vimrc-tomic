@@ -4,5 +4,5 @@ if has("gui_running")
 	set guifont=Inconsolata-dz\ 9
 endif
 
-" Kyushu is using bepo,let source the remapping !
+" Tomic is using bepo,let source the remapping !
 exe 'source $HOME/.vim/vimrc-bepo'
