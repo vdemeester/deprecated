@@ -105,6 +105,10 @@ nmap <leader>l :set list!<CR>
 nmap <leader>n :set nu!<CR>
 " - Quick change directory
 map <leader>cd :cd %:p:h<cr>
+" - Toogle Gundo view
+nmap <leader>u :GundoToggle<cr>
+" Customization : Preview pane (diff) at the bottom of the current buffer
+let g:gundo_preview_bottom = 1
 
 " listchar      
 set listchars=nbsp:·,tab:☞\ ,trail:¤,extends:>,precedes:<,eol:¬

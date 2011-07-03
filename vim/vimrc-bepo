@@ -14,3 +14,7 @@ noremap h c
 noremap k s
 noremap k s
 noremap l r
+
+" Gundo specific
+let g:gundo_map_move_older = "t"
+let g:gundo_map_move_newer = "s"
