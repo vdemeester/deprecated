@@ -100,13 +100,17 @@ autocmd! bufwritepost .vimrc source $MYVIMRC
 " Quick access to useful funtions
 " - Quick saving
 nmap <leader>w :w!<CR>
-" - Toogle typo characters
-nmap <leader>l :set list!<CR>
-" - Toogle line numbers
-nmap <leader>n :set nu!<CR>
+" - Toggle typo characters
+nmap <leader>tl :set list!<CR>
+" - Toggle line numbers
+nmap <leader>tn :set number!<CR>
+" - Toggle relative numbers (fun)
+nmap <leader>tN :set relativenumber!<CR>
+" - Spell checking
+nmap <leader>ts :set spell!<CR>
 " - Quick change directory
 map <leader>cd :cd %:p:h<cr>
-" - Toogle Gundo view
+" - Toggle Gundo view
 nmap <leader>u :GundoToggle<cr>
 " Customization : Preview pane (diff) at the bottom of the current buffer
 let g:gundo_preview_bottom = 1
