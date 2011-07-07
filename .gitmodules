@@ -19,3 +19,6 @@
 [submodule "vim/bundle/QFixToggle"]
 	path = vim/bundle/QFixToggle
 	url = git://github.com/sunaku/QFixToggle.git
+[submodule "vim/bundle/nerdcommenter"]
+	path = vim/bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
