@@ -117,6 +117,9 @@ nmap <leader>u :GundoToggle<cr>
 nmap <leader>tq :QFix<CR>
 " Customization : Preview pane (diff) at the bottom of the current buffer
 let g:gundo_preview_bottom = 1
+" Customization of unimpaired keymap (not upstream right now)
+let g:unimpaired_leader_next = ')'
+let g:unimpaired_leader_prev = '('
 
 " Customize fugitive
 if has("autocmd")
