@@ -130,7 +130,7 @@ if has("autocmd")
 endif
 
 " listchar      
-set listchars=nbsp:·,tab:▸\ ,trail:¤,extends:>,precedes:<,eol:¬
+set listchars=nbsp:¤,tab:▸\ ,trail:¤,extends:>,precedes:<,eol:¬
 
 syntax enable
 " colorise les nbsp       
