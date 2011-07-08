@@ -1,8 +1,8 @@
 " force terminal to use 256 colors
 set t_Co=256
 if has("gui_running")
-	set guifont=Inconsolata-dz\ 9
+	set guifont=Monospace\ 9
 endif
 
-" Kyushu is using bepo,let source the remapping !
+" Vinnsento is using bepo,let source the remapping !
 exe 'source $HOME/.vim/vimrc-bepo'
