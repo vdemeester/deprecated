@@ -115,6 +115,9 @@ nmap <leader>u :GundoToggle<cr>
 
 " Toggle quicklist window
 nmap <leader>tq :QFix<CR>
+" Customization of netrw
+" - No mouse support on netrw as it is *really* annoying
+let g:netrw_mousemaps = 0
 " Customization : Preview pane (diff) at the bottom of the current buffer
 let g:gundo_preview_bottom = 1
 " Customization of unimpaired keymap (not upstream right now)
