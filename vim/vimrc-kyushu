@@ -4,5 +4,8 @@ if has("gui_running")
 	set guifont=Inconsolata-dz\ 9
 endif
 
-" Kyushu is using bepo,let source the remapping !
-exe 'source $HOME/.vim/vimrc-bepo'
+" Kyushu is a Linux host
+if !empty(system("setxkbmap -print|grep bepo"))
+    let g:keymap_bepo = 1
+    " exe 'source $HOME/.vim/vimrc-bepo'
+endif

@@ -168,9 +168,20 @@ vnoremap <silent> # :call VisualSearch('b')<CR>
 vnoremap < <gv
 vnoremap > >gv
 
+" Custom gloabal variable These variable could be used in several plugins and
+" are meant to be set (or not) in the hostname-specific config file.
+" Is my keymap in bepo, or not ?
+" - yes = 1
+" - no  = 0
+" by default let say, it's not
+let g:keymap_bepo = 0
 " Finaly source `hostname` specific configuration file if existing
 let hostfile=$HOME . '/.vim/vimrc-' . hostname()
 if filereadable(hostfile)
     exe 'source ' . hostfile
+endif
+" if we are on a bepo keymap operating system, load the remapping file.
+if g:keymap_bepo == 1
+    exe 'source ' . $HOME . '/.vim/vimrc-bepo'
 endif
 " vim: set foldmethod=marker
