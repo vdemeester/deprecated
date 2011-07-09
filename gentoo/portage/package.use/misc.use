@@ -1,7 +1,0 @@
-app-crypt/gnupg doc pcsc-lite smartcard
-app-shells/zsh maildir doc
-app-admin/conky mpd thinkpad wifi
-app-office/libreoffice-bin gnome
-app-editor/vim ruby vim-pager
-app-editor/gvim ruby vim-pager
-app-arch/libarchive xattr

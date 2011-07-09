@@ -1,4 +1,0 @@
-# minimal in order to compile only the client
-dev-db/mysql minimal -community
-dev-db/sqlite doc extensions secure-delete unlock-notify
-dev-lang/spidermonkey unicode

@@ -1,5 +1,0 @@
-gnome-base/gvfs fuse archive gphoto2
-sys-apps/gnome-disk-utility fat nautilus
-gnome-base/nautilus xmp
-net-misc/vinagre -telepathy
-
