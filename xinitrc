@@ -6,7 +6,7 @@
 # Load .Xdefaults
 xrdb -merge ~/.Xdefaults
 # Set Keyboard to bépo !
-setxkbmap fr bepo
+setxkbmap fr bepo-sbr
 # Disable Capslock and map it to escape
 setxkbmap -option caps:escape
 # Enable CTRL+ALT+BACKSPACE to terminate X
@@ -48,4 +48,5 @@ elif [[ -f /usr/bin/synergyc && -f $HOME/.synergy.client.conf ]]; then
 fi
 # and start XMonad
 exec ck-launch-session xmonad
+#exec ck-launch-session wmfs
 #exec xmonad
