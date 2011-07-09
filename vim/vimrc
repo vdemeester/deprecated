@@ -100,16 +100,29 @@ autocmd! bufwritepost .vimrc source $MYVIMRC
 " Quick access to useful funtions
 " - Quick saving
 nmap <leader>w :w!<CR>
-" - Toogle typo characters
-nmap <leader>l :set list!<CR>
-" - Toogle line numbers
-nmap <leader>n :set nu!<CR>
+" - Toggle typo characters
+nmap <leader>tl :set list!<CR>
+" - Toggle line numbers
+nmap <leader>tn :set number!<CR>
+" - Toggle relative numbers (fun)
+nmap <leader>tN :set relativenumber!<CR>
+" - Spell checking
+nmap <leader>ts :set spell!<CR>
 " - Quick change directory
 map <leader>cd :cd %:p:h<cr>
-" - Toogle Gundo view
+" - Toggle Gundo view
 nmap <leader>u :GundoToggle<cr>
+
+" Toggle quicklist window
+nmap <leader>tq :QFix<CR>
+" Customization of netrw
+" - No mouse support on netrw as it is *really* annoying
+let g:netrw_mousemaps = 0
 " Customization : Preview pane (diff) at the bottom of the current buffer
 let g:gundo_preview_bottom = 1
+" Customization of unimpaired keymap (not upstream right now)
+let g:unimpaired_leader_next = ')'
+let g:unimpaired_leader_prev = '('
 
 " Customize fugitive
 if has("autocmd")
@@ -117,7 +130,7 @@ if has("autocmd")
 endif
 
 " listchar      
-set listchars=nbsp:·,tab:☞\ ,trail:¤,extends:>,precedes:<,eol:¬
+set listchars=nbsp:¤,tab:▸\ ,trail:¤,extends:>,precedes:<,eol:¬
 
 syntax enable
 " colorise les nbsp       
@@ -155,9 +168,20 @@ vnoremap <silent> # :call VisualSearch('b')<CR>
 vnoremap < <gv
 vnoremap > >gv
 
+" Custom gloabal variable These variable could be used in several plugins and
+" are meant to be set (or not) in the hostname-specific config file.
+" Is my keymap in bepo, or not ?
+" - yes = 1
+" - no  = 0
+" by default let say, it's not
+let g:keymap_bepo = 0
 " Finaly source `hostname` specific configuration file if existing
 let hostfile=$HOME . '/.vim/vimrc-' . hostname()
 if filereadable(hostfile)
     exe 'source ' . hostfile
+endif
+" if we are on a bepo keymap operating system, load the remapping file.
+if g:keymap_bepo == 1
+    exe 'source ' . $HOME . '/.vim/vimrc-bepo'
 endif
 " vim: set foldmethod=marker

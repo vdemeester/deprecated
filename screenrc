@@ -1,7 +1,24 @@
+defencoding utf-8
+encoding utf-8 utf-8
+altscreen on
+
+autodetach on  # detach on hangup
+pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."
+
+hardcopydir "$HOME/.screen/"
+nethack on
+startup_message off
+vbell off
+vbell_msg "Bell in %t"
+
+caption splitonly '%?%F@%: %?%3n %t%? [%f]%?'
+hardstatus on
+hardstatus alwayslastline
+#hardstatus string '%{= Kw}%-w%{+bu}%n %t%{-}%+w%-18= | %D %m-%d %02c'
 # status
 hardstatus alwayslastline '%{= M} %H%{= G} %l %= %{= w}%-w%{+b r}%n*%t%{-b r}%{w}%+w %= %{c}%d %D %{B}%c '
 
 # add CPU idle/sustem/user/interrupt stats
-backtick 100 5 5 tail -1 /var/tmp/mprem.stats.top
-caption always '%{= wk} %200` %= %100` %='
+#backtick 100 5 5 tail -1 /var/tmp/mprem.stats.top
+#caption always '%{= wk} %200` %= %100` %='
 
