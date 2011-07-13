@@ -6,7 +6,7 @@
 	<artifactId>org.shortbrain.util</artifactId>
 	<name>shortbrain util class</name>
 	<packaging>jar</packaging>
-	<version>0.1.2</version>
+	<version>0.2.0</version>
 	<properties>
 		<commons.collections.version>3.2.1</commons.collections.version>
 		<commons.lang.version>2.4</commons.lang.version>
@@ -56,4 +56,22 @@
 		<connection>scm:git:git://github.com/vdemeester/org.shortbrain.util.git</connection>
 		<developerConnection>scm:git:git@github.com:vdemeester/org.shortbrain.util.git</developerConnection>
 	</scm>
+	<distributionManagement>
+		<repository>
+			<id>nextep-release</id>
+			<name>Nextep</name>
+			<url>http://mvn.nextep.me:8081/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nextep-release</id>
+			<name>Nextep</name>
+			<url>http://mvn.nextep.me:8081/nexus/content/repositories/snapshots/</url>
+			</snapshotRepository>
+	</distributionManagement>
+	<repositories>
+		<repository>
+			<id>nextep-internal</id>
+			<url>http://mvn.nextep.me:8081/nexus/content/groups/public/</url>
+		</repository>
+	</repositories>
 </project>

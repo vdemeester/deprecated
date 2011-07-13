@@ -1,4 +1,4 @@
-Shortbrain util library
+Shortbrain util library ![Project status](http://stillmaintained.com/vdemeester/org.shortbrain.util.png)
 ========================
 
 This is my personnal util library I use daily, at work and anywhere else.
