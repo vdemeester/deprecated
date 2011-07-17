@@ -1,6 +1,6 @@
 " .vimrc file of Vincent Demeester
 " I tried to comment it as much as I could.
-"
+" 
 " Load pathogen (if present)
 " This has to be before filetype plugin on as pathogen won't work then.
 runtime pathogen_init
@@ -35,6 +35,9 @@ if has("gui_running")
     " Light background on GUI version
     set background=light
 else
+    if $TERM =~ "-256color"
+        set t_Co=256
+    endif
     " Dark background on CLI version (as terminal background usually dark)
     set background=dark
     " Enable mouse support in CLI
