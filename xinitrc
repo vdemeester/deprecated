@@ -16,10 +16,10 @@ xmodmap ~/.Xmodmap
 # Set better defailt cursor for X
 xsetroot -cursor_name left_ptr
 # If were on Thinkpad (or at least having a Trackpoint)
-if [[ -f /usr/bin/xinput ]]; then
+if [ -f /usr/bin/xinput ]; then
     tp=`/usr/bin/xinput list | grep "TPPS/2 IBM TrackPoint"`
     echo $tp
-    if [[ -n "$tp" ]]; then
+    if [ -n "$tp" ]; then
         # Trackpoint is on, let's play with xinput
         # Vertical scrolling
         xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 8 1
@@ -33,7 +33,8 @@ unclutter -idle 5 &
 # Start terminal emulation daemon
 urxvtd -q -o -f
 # Set the background (ugly right now, isn't it ?)
-feh --bg-fill ~/pictures/wallpapers/current.jpg 
+#feh --bg-fill ~/pictures/wallpapers/current.jpg 
+feh --bg-fill $HOME/pictures/wallpapers/basho/wallpaper-395819.jpg
 # Autostart programs
 if [ -d $HOME/.xinitrc.d ] ; then
     for f in $HOME/.xinitrc.d/*.sh ; do
