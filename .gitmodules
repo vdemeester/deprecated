@@ -34,3 +34,9 @@
 [submodule "vim/bundle/taglist"]
 	path = vim/bundle/taglist
 	url = git://github.com/vim-scripts/taglist.vim.git
+[submodule "vim"]
+	path = vim
+	url = git://github.com/vdemeester/vim-config.git
+[submodule "xmonad"]
+	path = xmonad
+	url = git://github.com/vdemeester/xmonad-config.git
