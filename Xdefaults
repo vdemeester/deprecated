@@ -2,16 +2,11 @@
 ! author: Vincent Demeester http://sbr.me
 ! vim:ai:si:et:ts=4:sw=4:ft=xdefaults:
 
-! Xft
-!Xft.dpi: 96
-!Xft.antialias: true
-!Xft.rgba: rgba
-!Xft.hinting: true
-!Xft.hintstyle: hintfull
-
 ! URxvt
+URxvt.depth: 32
+URxvt.background: rgba:1111/1111/1111/dddd
 URxvt.buffered: true
-URxvt.background: #1A1A1A
+!URxvt.background: #1A1A1A
 URxvt.foreground: #999999
 URxvt.cursorColor: #5E468C
 URxvt.cursorBlink: true
