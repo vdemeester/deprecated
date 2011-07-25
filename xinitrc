@@ -5,36 +5,10 @@
 # --------------------------------------
 # Load .Xdefaults
 xrdb -merge ~/.Xdefaults
-# Set Keyboard to bépo !
-setxkbmap fr bepo-sbr
-# Disable Capslock and map it to escape
-setxkbmap -option compose:caps
-# Enable CTRL+ALT+BACKSPACE to terminate X
-setxkbmap -option terminate:escape
-# call Xmodmap
-xmodmap ~/.Xmodmap
 # Set better defailt cursor for X
 xsetroot -cursor_name left_ptr
-# If were on Thinkpad (or at least having a Trackpoint)
-if [ -f /usr/bin/xinput ]; then
-    tp=`/usr/bin/xinput list | grep "TPPS/2 IBM TrackPoint"`
-    echo $tp
-    if [ -n "$tp" ]; then
-        # Trackpoint is on, let's play with xinput
-        # Vertical scrolling
-        xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 8 1
-        xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 8 2
-        # Horizontal scrolling (with vertical enabled)
-        xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
-    fi
-fi
 # hide curson
 unclutter -idle 5 &
-# Start terminal emulation daemon
-urxvtd -q -o -f
-# Set the background (ugly right now, isn't it ?)
-#feh --bg-fill ~/pictures/wallpapers/current.jpg 
-feh --bg-fill $HOME/pictures/wallpapers/basho/wallpaper-395819.jpg
 # Autostart programs
 if [ -d $HOME/.xinitrc.d ] ; then
     for f in $HOME/.xinitrc.d/*.sh ; do
@@ -44,5 +18,3 @@ if [ -d $HOME/.xinitrc.d ] ; then
 fi
 # and start XMonad
 exec ck-launch-session xmonad
-#exec ck-launch-session wmfs
-#exec xmonad
