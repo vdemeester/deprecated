@@ -8,4 +8,5 @@ bin/lsx
 bin/dzen2
 bin/dmenu
 bin/dmenu_run
+bin/dcompmgr
 .DS_Store
