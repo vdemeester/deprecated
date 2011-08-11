@@ -1,7 +1,8 @@
-"hg4849 (created: 2010/11/19 01:00:12)
+"hg6331 "(created 2011/08/01 00:00:08)"
 
+loadplugins '\.(js|penta)$'
+group user
 set guioptions=rbCsT
 set runtimepath=/home/vincent/.pentadactyl
 
-source ~/.vimrc.bepo
 " vim: set ft=pentadactyl:
