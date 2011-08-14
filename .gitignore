@@ -4,5 +4,6 @@
 xmonad/xmonad.errors
 xmonad/xmonad-i386-linux
 xmonad/xmonad-x86_64-linux
-bin/*
+.backup_old_dot_files
+pentadactyl/info
 .DS_Store
