@@ -3,8 +3,11 @@
 # Read arguments
 while ! test -z "$1"; do
     case $1 in
-        "--force"|"-f") NO_BACKUP="yes" ;;
-        *) ;;
+        "--force"|"-f") 
+            NO_BACKUP="yes" ;;
+        *)
+            MODULES="${MODULES} $1"
+            NO_DEFAULT_MODULES="yes";;
     esac
     shift
 done
@@ -18,11 +21,14 @@ if test -z $BACKUP_DIR; then
     BACKUP_DIR=".backup_old_dot_files"
 fi
 
+command -v color >/dev/null || color() { true; }
+command -v system_release >/dev/null || system_release() { true; }
+
 # Get system information
 UNAME=$(uname)
 HOSTNAME=$(hostname -s)
 DOMAINNAME=$(domainname)
-RELEASE=$(bin/system-release)
+RELEASE=$(system_release)
 
 if test -f "${BOOTSTRAP_FOLDER}/common.sh"; then
     . "${BOOTSTRAP_FOLDER}/common.sh"
@@ -30,8 +36,6 @@ else
     echo "$(basename 0): ${BOOTSTRAP_FOLDER}/common.sh is missing.."
     exit 1
 fi
-
-command -v color >/dev/null || color() { true; }
 
 echo
 echo "$(color orange)                     __ _                   $(color)"
@@ -72,7 +76,11 @@ if test -z "$MODULES"; then
     # Default module
     MODULES="${REQUIRED_MODULES} zsh vim screen git fonts"
 else
-    MODULES="${REQUIRED_MODULES} ${MODULES}"
+    if test "${NO_DEFAULT_MODULES}" = "yes"; then
+        MODULES="${MODULES}"
+    else
+        MODULES="${REQUIRED_MODULES} ${MODULES}"
+    fi
 fi
 
 # The real stuff happen here !

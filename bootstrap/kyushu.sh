@@ -1,4 +1,6 @@
 #!/bin/sh
 # Specific bootstrap stuff for kyushu host
-MODULES="zsh vim pentadactyl git screen xorg xinit xmonad"
+if test -z "${MODULES}"; then
+    MODULES="zsh vim pentadactyl git screen xorg xinit xmonad"
+fi
 #ROOT_MODULES="lib scripts zsh vim"
