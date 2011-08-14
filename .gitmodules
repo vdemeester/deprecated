@@ -43,3 +43,6 @@
 [submodule "scripts"]
 	path = scripts
 	url = git://github.com/vdemeester/scripts.git
+[submodule "zsh"]
+	path = zsh
+	url = git://github.com/vdemeester/zsh-config
