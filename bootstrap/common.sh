@@ -41,6 +41,10 @@ link_simple() {
         echo "$(basename $0): ${source} not found."
         return 1
     fi
+    if test -e $dest; then
+        backup_it $dest
+        rm -R $dest
+    fi
     echo -n "> Linking ${source} to ${dest}.."
     exec_status "ln -s $source $dest"
 }
