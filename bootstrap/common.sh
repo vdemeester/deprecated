@@ -104,7 +104,7 @@ link_it() {
 
 # Backup a file or folder
 backup_it() {
-    if test -z $NO_BACKUP; then
+    if test -z "$NO_BACKUP"; then
         local target=$1
         echo "$(color blue)backing it up$(color)"
         if test -z $BACKUP_DIR; then
@@ -112,14 +112,14 @@ backup_it() {
             warn "No \$BACKUP_DIR defined, using ${BACKUP_DIR} \n"
         fi
         if ! test -d $BACKUP_DIR; then
-            echo "mkdir $BACKUP_DIR"
+            mkdir $BACKUP_DIR
         fi
         local exec="cp"
         if test -d $target; then
             exec="cp -R"
         fi
         local cmd="${exec} ${target} ${BACKUP_DIR}/"
-        echo "$cmd"
+        $cmd
     else
         # no backup (--force)
         return 0
