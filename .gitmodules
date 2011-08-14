@@ -40,3 +40,6 @@
 [submodule "xmonad"]
 	path = xmonad
 	url = git://github.com/vdemeester/xmonad-config.git
+[submodule "scripts"]
+	path = scripts
+	url = git://github.com/vdemeester/scripts.git
