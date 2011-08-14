@@ -1,6 +1,6 @@
 [user]
-	name = Vincent Demeester
-	email = ********************
+	name = ${name}
+	email = ${email}
 [alias]
 	co = checkout
 	st = status
@@ -31,5 +31,5 @@
 [gui]
 	editor = gvim
 [github]
-	user = **********
-	token = ***************************
+	user = ${gh_user}
+	token = ${gh_token}
