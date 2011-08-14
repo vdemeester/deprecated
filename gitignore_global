@@ -30,6 +30,10 @@
 *.sql
 *.sqlite
 
+# Vim generated files #
+######################
+doc/tags
+
 # OS generated files #
 ######################
 .DS_Store?
