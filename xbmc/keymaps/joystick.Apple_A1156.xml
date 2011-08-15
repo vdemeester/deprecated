@@ -1,0 +1,53 @@
+<keymap>
+    <global>
+    <joystick name="Apple_A1156">
+        <button id="1">Up</button>                                        <!--- Up --->
+        <button id="2">Down</button>                                      <!--- Down --->
+        <button id="3">Left</button>                                      <!--- Left --->
+        <button id="4">Right</button>                                     <!--- Right --->
+        <button id="5">Select</button>                                    <!--- Play --->
+        <button id="6">PreviousMenu</button>                              <!--- Menu --->
+    </joystick>
+    </global>
+
+    <MyMusicLibrary>
+    <joystick name="Apple_A1156">
+        <button id="6">ParentDir</button>                                 <!--- Menu --->
+    </joystick>
+    </MyMusicLibrary>
+
+    <FullscreenVideo>
+    <joystick name="Apple_A1156">
+        <button id="1">BigStepForward</button>                            <!--- Up --->
+        <button id="2">BigStepBack</button>                               <!--- Down --->
+        <button id="3">StepBack</button>                                  <!--- Left --->
+        <button id="4">StepForward</button>                               <!--- Right --->
+        <button id="5">Pause</button>                                     <!--- Play --->
+        <button id="6">OSD</button>                                       <!--- Menu --->
+    </joystick>
+    </FullscreenVideo>
+
+    <FullscreenInfo>
+    </FullscreenInfo>
+
+    <PlayerControls>
+    </PlayerControls>
+
+    <Visualisation>
+    <joystick name="Apple_A1156">
+        <button id="1">SkipNext</button>                                <!--- Up --->
+        <button id="2">SkipPrevious</button>                            <!--- Down --->
+        <button id="3">SkipPrevious</button>                              <!--- Left --->
+        <button id="4">SkipNext</button>                                  <!--- Right --->
+        <button id="5">pause</button>                                     <!--- Play --->
+        <button id="6">XBMC.ActivateWindow(MusicOSD)</button>             <!--- Menu --->
+    </joystick>
+    </Visualisation>
+
+    <MusicOSD>
+    <joystick name="Apple_A1156">
+        <button id="6">close</button>
+    </joystick>
+    </MusicOSD>
+
+</keymap>

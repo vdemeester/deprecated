@@ -1,0 +1,5 @@
+<advancedsettings>
+    <loglevel>1</loglevel>
+    <displayremotecodes>True</displayremotecodes>
+    <remoterepeat>1000</remoterepeat>
+</advancedsettings>

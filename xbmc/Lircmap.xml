@@ -1,0 +1,10 @@
+<lircmap>
+    <remote device="Apple_A1156">
+        <play>PLAY</play>
+        <reverse>BACKWARD</reverse>
+        <forward>FORWARD</forward>
+        <volumeplus>VOLUP</volumeplus>
+        <volumeminus>VOLDOWN</volumeminus>
+        <menu>MENU</menu>
+    </remote>
+</lircmap>

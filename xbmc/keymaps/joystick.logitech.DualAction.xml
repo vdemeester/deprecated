@@ -1,0 +1,57 @@
+<keymap>
+    <global>
+        <joystick name="Logitech Logitech Dual Action">
+            <altname>Joystick 0</altname>
+            <button id="1">ParentDir</button>
+            <button id="2">select</button>
+            <button id="3">Pause</button>
+            <button id="4">Stop</button>
+            <button id="5">skipPrevious</button>
+            <button id="6">skipNext</button>
+            <button id="7">Rewind</button>
+            <button id="8">FastForward</button>
+            <button id="9">ContextMenu</button>
+            <button id="10">FullScreen</button>
+            <hat id="1" position="left">Left</hat>
+            <hat id="1" position="right">Right</hat>
+            <hat id="1" position="up">Up</hat>
+            <hat id="1" position="down">Down</hat>
+            <axis limit="+1" id="4">VolumeDown</axis>
+            <axis limit="-1" id="4">VolumeUp</axis>
+            <axis limit="+1" id="3">AnalogSeekForward</axis>
+            <axis limit="-1" id="3">AnalogSeekBack</axis>
+            <axis limit="-1" id="2">ScrollUp</axis>
+            <axis limit="+1" id="2">ScrollDown</axis>
+        </joystick>
+    </global>
+    <FullscreenVideo>
+        <joystick name="Logitech Logitech Dual Action">
+            <altname>Joystick 0</altname>
+            <button id="9">OSD</button>
+        </joystick>
+    </FullscreenVideo>
+    <ContextMenu>
+        <joystick name="Logitech Logitech Dual Action">
+            <altname>Joystick 0</altname>
+            <button id="9">Close</button>
+        </joystick>
+    </ContextMenu>
+    <VideoOSD>
+        <joystick name="Logitech Logitech Dual Action">
+            <altname>Joystick 0</altname>
+            <button id="9">Close</button>
+        </joystick>
+    </VideoOSD>
+    <MusicOSD>
+        <joystick name="Logitech Logitech Dual Action">
+            <altname>Joystick 0</altname>
+            <button id="9">Close</button>
+        </joystick>
+    </MusicOSD>
+    <Visualisation>
+        <joystick name="Logitech Logitech Dual Action">
+            <altname>Joystick 0</altname>
+            <button id="9">ActivateWindow(MusicOSD)</button>
+        </joystick>
+    </Visualisation>
+</keymap>
