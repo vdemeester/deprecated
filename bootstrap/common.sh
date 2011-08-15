@@ -87,17 +87,25 @@ link_it() {
         return 1
     fi
     local target_file="${target_folder}/${prefix}${orig_file}"
+    local from="$PWD/$file"
+    if ! test "${file}" = "${orig_file}"; then
+        from="${file}"
+    fi
+    echo -n "> Linking $file to ${target_file}.. "
     if test -e $target_file; then
         if ! test -L $target_file; then
             warn "${target_file} exists and is not a symbolic link.. "
             backup_it ${target_file}
+        else
+            # This is a symbolic link, checking if it points on the file
+            # which means nothing is needed.
+            link_target=$(readlink ${target_file})
+            if test "${link_target}" = "${from}"; then
+                echo "$(color violet)already exists.. $(color)$(color yellow)passed$(color)"
+                return 0
+            fi
         fi
         rm -R ${target_file}
-    fi
-    echo -n "> Linking $file to ${target_file}.. "
-    local from="$PWD/$file"
-    if ! test "${file}" = "${orig_file}"; then
-        from="${file}"
     fi
     exec_status "ln -s ${from} ${target_file}"
 }
