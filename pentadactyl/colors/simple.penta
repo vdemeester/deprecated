@@ -1,0 +1,41 @@
+" ==Vimperator_Color_Scheme==
+" name: Simple
+" modifications: Travis Jeffery <t.jeffery@utoronto.ca>
+" - changed font to monospace
+" - changed colors to be brighter and more excitings
+" ==Simple_Color_Scheme==
+
+highlight Bell display: none;
+
+highlight CmdLine font-size: 10px; font-weight: normal; font-family:"monospace", monospace; padding: 0 0;
+
+highlight CompGroup          font-size: 9px; color: #111;
+highlight CompTitle          font-size: 9px; letter-spacing: 2px; color: #333; background: #CCC;
+highlight CompItem           padding: 0 0; font-family: "monospace", monospace;
+highlight CompItem[selected] background-color: #DDD;
+highlight CompDesc           color: #888;
+" highlight CompMsg
+highlight Gradient           background-color: #FFF;
+highlight GradientLeft       background-color: #FFF;
+highlight GradientRight      background-color: #FFF;
+
+highlight ErrorMsg background-color: #E00; color: #F5F5F5;
+highlight Filter font-weight: bold; color: #000;
+
+highlight StatusLine       font-size: 12px !important; font-weight: normal !important; color: #eee !important; background: #EEE !important;
+highlight StatusLineBroken font-size: 12px !important; font-weight: normal !important; color: #eee !important; background: #FDD !important;
+highlight StatusLineSecure font-size: 12px !important; font-weight: normal !important; color: #eee !important; background: #DDF !important;
+
+" highlight WarningMsg
+highlight Hint font-family: "monospace", monospace; font-size: 12px; font-weight: normal; color: white; background-color: black; padding: 0px 4px; opacity: 0.6;
+
+highlight HintElem background-color: #00CC000;
+" highlight HintActive
+
+highlight Title font-size: 12px; letter-spacing: 2px; color: #333; background: #CCC;
+
+style -name statusbar chrome://* <<EOM
+#status-bar statusbarpanel { padding: 2px !important; }
+statusbarpanel > * { margin: 0 !important; padding: 0 !important; }
+EOM
+

@@ -1,8 +1,41 @@
+" vim: syntax=vim
 loadplugins '\.(js|penta)$'
 group user
 set guioptions=Cs
 set runtimepath=/home/vincent/.pentadactyl
 
+" Set the mapleader
+set mapleader=","
+" beep stuff
+set visualbell
+" find as you type
+set incfind
+" highlight the terms
+set hlfind
+" unless they contain upper-case letters
+set findcase=smart
+" duckduckgo as the default search engine
+set defsearch=duckduckgo-ssl
+
+map <silent> <leader>h :set nohlfind!<CR>
+" Show preferences
+map <silent> <leader>p :emenu Edit.Preferences<CR>
+
+" tabline stuff
+set showtabline=multitab
+map <silent> <leader>b :toolbartoggle Bookmarks Toolbar<CR>
+map <silent> <leader>y :set showtabline=always<CR>
+map <silent> <leader>u :set showtabline=never<CR>
+
+" set wild mode to show completions as you type
+set wildmode="list:full"
+" colorscheme
+colorscheme simple
+" show the available tabs
+noremap <leader>t :buffers<CR>
+
+noremap j 6j
+noremap k 6k
 ""
 "" mapping du clavier bépo->qwerty en mode normal
 ""
