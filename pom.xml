@@ -120,7 +120,7 @@
     <scm>
         <connection>scm:git:git://github.com/vdemeester/org.shortbrain.util.git</connection>
         <developerConnection>scm:git:git@github.com:vdemeester/org.shortbrain.util.git</developerConnection>
-        <url>http://github.com/vdemeester/org.shortbrain.util.git</url>
+        <url>http://github.com/vdemeester/org.shortbrain.util</url>
     </scm>
     <distributionManagement>
         <repository>
@@ -152,7 +152,7 @@
     </organization>
     <issueManagement>
         <system>github</system>
-        <url>http://github.com/vdemeester/org.shortbrain.util.git/issues</url>
+        <url>http://github.com/vdemeester/org.shortbrain.util/issues</url>
     </issueManagement>
     <licenses>
         <license>
