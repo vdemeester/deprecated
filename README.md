@@ -1,9 +1,9 @@
-                   __ _           
-   ___ ___  _ __  / _(_) __ _ ___ 
-  / __/ _ \| '_ \| |_| |/ _` / __|
- | (_| (_) | | | |  _| | (_| \__ \
-(_)___\___/|_| |_|_| |_|\__, |___/
-                        |___/     
+                       __ _           
+       ___ ___  _ __  / _(_) __ _ ___ 
+      / __/ _ \| '_ \| |_| |/ _` / __|
+     | (_| (_) | | | |  _| | (_| \__ \
+    (_)___\___/|_| |_|_| |_|\__, |___/
+                            |___/     
 
 This is my personal config file (or often called `dotfiles`) git repository.
 
@@ -15,15 +15,16 @@ let you dig in.
 
 These config files are meant to work on GNU/Linux (mainly used on Debian-based
 host but should work on all distribution) and on Mac OS X. Most of it should 
-work on other *nixes too.
+work on other *nixes* too.
 
 # Features
 
 This dotfiles are mainly covering :
 
-- vim (git://github.com/vdemeester/vim-config.git)
-- xmonad (git://github.com/vdemeester/xmonad-config.git)
-- zsh
+- [scripts][] (git://github.com/vdemeester/scripts.git)
+- [vim][] (git://github.com/vdemeester/vim-config.git)
+- [xmonad][] (git://github.com/vdemeester/xmonad-config.git)
+- [zsh][] (git://github.com/vdemeester/zsh-config.git)
 - git
 - mutt
 - Xorg stuff
@@ -67,3 +68,7 @@ or ubuntu) and a Mac OS X system (which is not started often, but anyway). To
 know more about my hardware configuration, you could take a look at my [website][]. I use the same config files at work and at home.
 
 [website]:  http://shortbrain.org
+[scripts]: https://github.com/vdemeester/scripts
+[vim]: https://github.com/vdemeester/vim-config
+[xmonad]: https://github.com/vdemeester/xmonad-config
+[zsh]: https://github.com/vdemeester/zsh/config
