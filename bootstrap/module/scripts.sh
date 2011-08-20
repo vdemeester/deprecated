@@ -18,6 +18,9 @@ _init() {
 _apply() {
     cd ${SCRIPT_FOLDER}
     for file in *; do
+        if test "${file}" = "README.md"; then
+            continue
+        fi
         link_it ${LOCAL_PATH} "${file}" "bin/"
     done
     cd -
