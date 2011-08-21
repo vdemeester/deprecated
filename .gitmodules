@@ -46,3 +46,6 @@
 [submodule "zsh"]
 	path = zsh
 	url = git://github.com/vdemeester/zsh-config
+[submodule "sh"]
+	path = sh
+	url = git://github.com/vdemeester/sh-config.git
