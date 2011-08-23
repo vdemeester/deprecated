@@ -1,0 +1,6 @@
+Host *
+    ControlMaster auto
+    ControlPath /home/vincent/.local/tmp/ssh-%l-%r@%h:%p
+Host server.local
+	port 2222
+	User vincent
