@@ -1,4 +1,5 @@
 #!/bin/sh
+# vim: syntax=sh
 # Bootstraping script to install my config files
 # Read arguments
 while ! test -z "$1"; do
