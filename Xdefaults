@@ -7,7 +7,7 @@ URxvt.depth: 32
 URxvt.background: rgba:1111/1111/1111/dddd
 URxvt.buffered: true
 !URxvt.background: #1A1A1A
-URxvt.foreground: #999999
+URxvt.foreground: #BBBBBB
 URxvt.cursorColor: #5E468C
 URxvt.cursorBlink: true
 URxvt.transparent: 0
