@@ -65,8 +65,6 @@ if ! test -z "${NO_BACKUP}"; then
     echo
 fi
 
-read -p "[Enter] to start the bootstrap, [CTRL+C] to cancel.." go
-
 if test -z "$FILE_PREFIX"; then
     FILE_PREFIX="."
 fi
@@ -83,6 +81,12 @@ else
         MODULES="${REQUIRED_MODULES} ${MODULES}"
     fi
 fi
+
+echo
+echo "Modules : ${MODULES}"
+echo
+
+read -p "[Enter] to start the bootstrap, [CTRL+C] to cancel.." go
 
 # The real stuff happen here !
 for module in ${MODULES}; do
