@@ -9,6 +9,7 @@ color() {
         "yellow"|"y" ) echo -n "${str}33m";;
         "magenta"|"m" ) echo -n "${str}35m";;
         "violet"|"v" ) echo -n "${str}1;35m";;
+        "white"|"w" ) echo -n "${str}37m";;
         * ) echo -n "${str}0m";;
     esac
 }
