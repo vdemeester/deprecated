@@ -1,4 +1,4 @@
-package net.nextep.service.util;
+package org.shortbrain.util.collection;
 
 import java.io.Serializable;
 import java.lang.reflect.InvocationTargetException;
@@ -6,8 +6,6 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-import org.apache.commons.logging.Log;
 
 /**
  * Build and execute a method using Bulk (which means by grouping element)
@@ -37,7 +35,7 @@ public class BulkBuilder<T extends Serializable> {
    * @param instance
    * @param method
    */
-  public Integer runWithBulk(List<T> list, Object instance, Method method,) 
+  public Integer runWithBulk(List<T> list, Object instance, Method method) 
       throws IllegalAccessException, IllegalArgumentException,
       InvocationTargetException {
     Integer bulkCount = 0;
