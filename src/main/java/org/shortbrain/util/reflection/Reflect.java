@@ -162,30 +162,55 @@ public class Reflect {
 		return objects;
 	}
 
-	/**
-	 * @param f
-	 * @param o
-	 * @return
-	 * @throws EnergyException
-	 */
-	public static Object getFieldValue(Field f, Object o)
-			throws ReflectionException {
-		Object object = null;
-		if (f != null && o != null) {
-			try {
-				Method getter = getDeclaredMethod(
-						"get" + StringUtils.capitalize(f.getName()),
-						o.getClass(), true, (Class<?>[]) null);
-				if (getter != null) {
-					object = getter.invoke(o, (Object[]) null);
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-				throw new ReflectionException(e, e.getLocalizedMessage());
-			}
-		}
-		return object;
-	}
+  /**
+   * @param f
+   * @param o
+   * @return
+   * @throws EnergyException
+   */
+  public static Object getFieldValue(Field f, Object o)
+      throws ReflectionException {
+    Object object = null;
+    if (f != null && o != null) {
+      try {
+        Method getter = getDeclaredMethod(
+            "get" + StringUtils.capitalize(f.getName()),
+            o.getClass(), true, (Class<?>[]) null);
+        if (getter != null) {
+          object = getter.invoke(o, (Object[]) null);
+        }
+      } catch (Exception e) {
+        e.printStackTrace();
+        throw new ReflectionException(e, e.getLocalizedMessage());
+      }
+    }
+    return object;
+  }
+  
+  /**
+   * @param f
+   * @param o
+   * @return
+   * @throws EnergyException
+   */
+  public static Object getFieldValueByName(String fName, Object o)
+      throws ReflectionException {
+    Object object = null;
+    if (fName != null && o != null) {
+      try {
+        Method getter = getDeclaredMethod(
+            "get" + StringUtils.capitalize(fName),
+            o.getClass(), true, (Class<?>[]) null);
+        if (getter != null) {
+          object = getter.invoke(o, (Object[]) null);
+        }
+      } catch (Exception e) {
+        e.printStackTrace();
+        throw new ReflectionException(e, e.getLocalizedMessage());
+      }
+    }
+    return object;
+  }
 
 	/**
 	 * @param o
