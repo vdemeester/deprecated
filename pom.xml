@@ -8,7 +8,7 @@
     <url>http://vdemeester.github.com/org.shortbrain.util/</url>
     <description>Util classes by Vincent Demeester.</description>
     <packaging>jar</packaging>
-    <version>0.3.0-SNAPSHOT</version>
+    <version>0.3.0</version>
 
     <properties>
         <commons.collections.version>3.2.1</commons.collections.version>
