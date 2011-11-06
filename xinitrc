@@ -17,4 +17,9 @@ if [ -d $HOME/.xinitrc.d ] ; then
     unset f
 fi
 # and start XMonad
-exec ck-launch-session xmonad
+HOSTNAME=$(hostname)
+if test "${HOSTNAME}" = "vinnsento"; then
+    exec xmonad
+else
+    exec ck-launch-session xmonad
+fi
