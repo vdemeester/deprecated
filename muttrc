@@ -85,5 +85,17 @@ macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 # quick-sync ~/Mail immediately with offlineimap
 macro index Z   "<shell-escape>~/.bin/mailrun.sh -q -o<enter>" "sync IMAP"
 
+# notmuch
+macro index <F8> \
+      "<enter-command>unset wait_key<enter><shell-escape>~/.local/bin/mutt-notmuch --prompt search<enter><change-folder-readonly>~/.cache/mutt_results<enter>" \
+      "search mail (using notmuch)"
+macro index <F9> \
+      "<enter-command>unset wait_key<enter><pipe-message>~/.local/bin/mutt-notmuch thread<enter><change-folder-readonly>~/.cache/mutt_results<enter><enter-command>set wait_key<enter>" \
+      "search and reconstruct owning thread (using notmuch)"
+macro index <F6> \
+      "<enter-command>unset wait_key<enter><pipe-message>~/.local/bin/mutt-notmuch tag -inbox<enter>" \
+      "remove message from inbox (using notmuch)"
+
+
 # offlineimap
-source ~/.mutt/muttrc.mailboxes
+source ~/.mutt/mailboxes
