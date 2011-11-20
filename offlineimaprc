@@ -1,0 +1,31 @@
+[general]
+ui = ttyui
+accounts = personal
+pythonfile=~/.offlineimap.py
+
+[Account personal]
+localrepository = personal-local
+remoterepository = personal-remote
+maxsyncaccounts = 3
+maxconnections = 3
+postsynchook = notmuch new
+
+[Repository personal-local]
+type = Maildir
+localfolders = ~/documents/mails/personal
+
+[Repository personal-remote]
+type = IMAP
+remotehost = imap.iki-project.fr.eu.org
+remoteport = 993
+remoteuser = vincent
+#remotepasseval = get_password('vincent@demeester.fr')
+ssl = yes
+
+[mbnames]
+enabled = yes
+filename = ~/.mutt/mailboxes
+header = "mailboxes "
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"
