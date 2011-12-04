@@ -4,7 +4,8 @@
 
 ! URxvt
 URxvt.depth: 32
-URxvt.background: rgba:1111/1111/1111/dddd
+URxvt.background: rgba:ffff/ffff/ffff/eeee
+!URxvt.background: rgba:1111/1111/1111/dddd
 URxvt.buffered: true
 !URxvt.background: #1A1A1A
 URxvt.foreground: #BBBBBB
@@ -36,6 +37,7 @@ URxvt*tintColor: white
 URxvt*shading: 8
 URxvt*termName: xterm-256color
 
-#include "/home/vincent/.colours/solarized"
+!#include "/home/vincent/.colours/tangoesque"
+#include "/home/vincent/.colours/sen"
 
 
