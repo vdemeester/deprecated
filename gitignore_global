@@ -34,6 +34,16 @@
 ######################
 doc/tags
 
+# Maven   files       #
+#######################
+target
+
+# Eclipse files       #
+#######################
+.classpath
+.project
+.settings
+
 # OS generated files #
 ######################
 .DS_Store?
