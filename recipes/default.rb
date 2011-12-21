@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-package "libmysql-ruby"
+package "libmysql-ruby" do
     case node[:platform]
     when "debian", "ubuntu"
         package_name "libmysql-ruby"
