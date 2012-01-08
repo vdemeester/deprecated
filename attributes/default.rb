@@ -38,4 +38,4 @@ default[:redmine][:db][:type] = "sqlite"
 default[:redmine][:db][:dbname] = "redmine"
 default[:redmine][:db][:user] = "redmine"
 default[:redmine][:db][:password] = pw
-default[:redmine][:db][:hostname] = "localhost"
+default[:redmine][:db][:hostname] = "127.0.0.1"
