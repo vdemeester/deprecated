@@ -1,6 +1,6 @@
-#
+# 
 # Cookbook Name:: redmine
-# Attributes:: default
+# Recipe:: database_sqlite
 #
 # Author:: Vincent Demeester <vincent@demeester.fr>
 #
@@ -17,25 +17,15 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-require 'openssl'
-
-pw = String.new
-
-while pw.length < 20
-      pw << OpenSSL::Random.random_bytes(1).gsub(/\W/, '')
-end
 #
-default[:rails][:version] = '2.3.14'
+include_recipe "sqlite"
 
-default[:redmine][:version] = '1.3.0'
-default[:redmine][:dl_id] = '75597'
-default[:redmine][:checksum] = '4aa3534ae6a06bc3732b1c8b6eee7c60'
-default[:redmine][:mirror] = 'http://rubyforge.org/frs/download.php'
+package "libsqlite3-ruby" do
+    action :upgrade
+end
 
-default[:redmine][:lang] = 'en'
-
-default[:redmine][:db][:type] = "sqlite"
-default[:redmine][:db][:dbname] = "redmine"
-default[:redmine][:db][:user] = "redmine"
-default[:redmine][:db][:password] = pw
-default[:redmine][:db][:hostname] = "localhost"
+file "/opt/#{redmine_version}/db/production.db" do
+    owner node[:apache][:user]
+    group node[:apache][:group]
+    mode "0644"
+end

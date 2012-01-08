@@ -1,6 +1,6 @@
-#
+# 
 # Cookbook Name:: redmine
-# Attributes:: default
+# Recipe:: database_mysql
 #
 # Author:: Vincent Demeester <vincent@demeester.fr>
 #
@@ -17,25 +17,20 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-require 'openssl'
-
-pw = String.new
-
-while pw.length < 20
-      pw << OpenSSL::Random.random_bytes(1).gsub(/\W/, '')
-end
 #
-default[:rails][:version] = '2.3.14'
+include_recipe "mysql::server"
 
-default[:redmine][:version] = '1.3.0'
-default[:redmine][:dl_id] = '75597'
-default[:redmine][:checksum] = '4aa3534ae6a06bc3732b1c8b6eee7c60'
-default[:redmine][:mirror] = 'http://rubyforge.org/frs/download.php'
+grants_path = "/opt/redmine_create_database.mysql.sql"
 
-default[:redmine][:lang] = 'en'
+template grants_path do
+    source "redmine_create_database.mysql.sql.erb"
+    owner "root"
+    group "root"
+    mode "0600"
+    action :create
+end
 
-default[:redmine][:db][:type] = "sqlite"
-default[:redmine][:db][:dbname] = "redmine"
-default[:redmine][:db][:user] = "redmine"
-default[:redmine][:db][:password] = pw
-default[:redmine][:db][:hostname] = "localhost"
+execute "mysql-install-application-privileges" do
+    mysql_password = node[:mysql][:server_root_password]
+    command "mysql -u root #{mysql_password.empty? ? '': '-p'}#{mysql_password} < #{grants_path}"
+end
