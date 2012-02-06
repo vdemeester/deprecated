@@ -1,4 +1,4 @@
-# 
+#
 # Cookbook Name:: gitolite
 # Recipe:: default
 #
@@ -28,10 +28,10 @@ when "ubuntu", "debian"
         if node[:platform_version].to_f >= 6.0 and node[:platform_version] !~ /.*sid/
             # Add the squeeze-backports repository if not present
             apt_repository "backports" do
-            uri "http://backports.debian.org/debian-backports"
-            distribution "squeeze-backports"
-            components ["main"]
-            action :add
+                uri "http://backports.debian.org/debian-backports"
+                distribution "squeeze-backports"
+                components ["main"]
+                action :add
             end
             # Add a apt preference file to change the gitolite policy
             cookbook_file "/etc/apt/preferences.d/gitolite-squeeze-backports" do
@@ -42,8 +42,19 @@ when "ubuntu", "debian"
             end
         end
     end
-end
-
-package "gitolite" do
-    action :install
+    package "gitolite" do
+        action :install
+    end
+when "arch"
+    include_recipe "pacman"
+    p = pacman_aur "gitolite-git" do
+        action :nothing
+    end
+    p.run_action(:build)
+    p.run_action(:install)
+else
+    # should catch any distro with gitolite as a package.
+    package "gitolite" do
+        action :install
+    end
 end
