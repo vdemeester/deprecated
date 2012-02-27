@@ -24,3 +24,6 @@ default[:gitolite][:use_backport] = false
 # "git" as default gitolite user
 default[:gitolite][:username] = "git"
 default[:gitolite][:admin][:username] = "admin"
+# Advanced gitolite configurations
+default[:gitolite][:wild_repos] = 1
+default[:gitolite][:umask] = "0077"
