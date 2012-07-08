@@ -1,4 +1,4 @@
-Shortbrain util library ![Project status](http://stillmaintained.com/vdemeester/org.shortbrain.util.png)
+Shortbrain util library ![Project status](http://stillmaintained.com/vdemeester/org.shortbrain.util.png) [![Build Status](https://secure.travis-ci.org/vdemeester/org.shortbrain.util.png?branch=master)](http://travis-ci.org/vdemeester/org.shortbrain.util)
 ========================
 
 This is my personnal util library I use daily, at work and anywhere else.
