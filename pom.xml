@@ -122,18 +122,6 @@
         <developerConnection>scm:git:git@github.com:vdemeester/org.shortbrain.util.git</developerConnection>
         <url>http://github.com/vdemeester/org.shortbrain.util</url>
     </scm>
-    <distributionManagement>
-        <repository>
-            <id>nextep-release</id>
-            <name>Nextep</name>
-            <url>http://mvn.nextep.me:8081/nexus/content/repositories/releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>nextep-release</id>
-            <name>Nextep</name>
-            <url>http://mvn.nextep.me:8081/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
     <developers>
         <developer>
             <id>vdemeester</id>
