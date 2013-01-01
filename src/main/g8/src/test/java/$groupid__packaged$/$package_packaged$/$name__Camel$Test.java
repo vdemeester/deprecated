@@ -1,4 +1,4 @@
-package org.xgbi.nexgen.support.$name$;
+package org.xgbi.nexgen.support.$package$;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

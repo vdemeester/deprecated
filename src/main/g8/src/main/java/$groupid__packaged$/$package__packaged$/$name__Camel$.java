@@ -1,4 +1,4 @@
-package org.xgbi.nexgen.support.$name$;
+package org.xgbi.nexgen.support.$package$;
 
 /**
  * Module $name;format="Camel"$.
