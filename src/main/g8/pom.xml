@@ -27,12 +27,12 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin</artifactId>
-            <version>${vaadin.version}</version>
+            <version>\${vaadin.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
+            <version>\${junit.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -74,7 +74,7 @@
                 <artifactId>site-maven-plugin</artifactId>
                 <version>0.6</version>
                 <configuration>
-                    <message>Creating site for ${project.version}</message>
+                    <message>Creating site for \${project.version}</message>
                     <repositoryName>vaadin-container-utils</repositoryName>
                     <repositoryOwner>vdemeester</repositoryOwner>
                 </configuration>
