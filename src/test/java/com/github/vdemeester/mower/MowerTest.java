@@ -21,7 +21,7 @@ public class MowerTest {
 	public void turn_right_modify_only_orientation() {
 		Coordinates initialCoordinates = new Coordinates(1, 1);
 		Mower mower = new Mower(initialCoordinates, Orientation.N, field);
-		mower.process(Instruction.R);
+		mower.process(Instruction.D);
 		assertEquals(initialCoordinates, mower.getCoordinates());
 		assertEquals(Orientation.E, mower.getOrientation());
 	}
@@ -30,7 +30,7 @@ public class MowerTest {
 	public void turn_left_modify_only_orientation() {
 		Coordinates initialCoordinates = new Coordinates(1, 1);
 		Mower mower = new Mower(initialCoordinates, Orientation.N, field);
-		mower.process(Instruction.L);
+		mower.process(Instruction.G);
 		assertEquals(initialCoordinates, mower.getCoordinates());
 		assertEquals(Orientation.W, mower.getOrientation());
 	}
@@ -39,7 +39,7 @@ public class MowerTest {
 	public void move_forward_modify_only_coordinates() {
 		Coordinates initialCoordinates = new Coordinates(1, 1);
 		Mower mower = new Mower(initialCoordinates, Orientation.N, field);
-		mower.process(Instruction.F);
+		mower.process(Instruction.A);
 		assertEquals(new Coordinates(1, 2), mower.getCoordinates());
 		assertEquals(Orientation.N, mower.getOrientation());
 	}
@@ -48,7 +48,7 @@ public class MowerTest {
 	public void move_forward_outside_field_doesnt_modify_anything() {
 		Coordinates initialCoordinates = new Coordinates(5, 5);
 		Mower mower = new Mower(initialCoordinates, Orientation.N, field);
-		mower.process(Instruction.F);
+		mower.process(Instruction.A);
 		assertEquals(initialCoordinates, mower.getCoordinates());
 		assertEquals(Orientation.N, mower.getOrientation());
 	}

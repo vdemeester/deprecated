@@ -43,11 +43,11 @@ public class Mower {
 	 */
 	public void process(Instruction instruction) {
 		switch (instruction) {
-		case R:
-		case L:
+		case D:
+		case G:
 			turn(instruction);
 			break;
-		case F:
+		case A:
 			move();
 		default:
 			break;

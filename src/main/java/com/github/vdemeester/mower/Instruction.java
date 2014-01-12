@@ -7,16 +7,16 @@ import java.util.Enumeration;
  * {@link Mower}.
  * 
  * <ul>
- * <li><strong>R</strong> for Right</li>
- * <li><strong>L</strong> for Left</li>
- * <li><strong>F</strong> for Forward</li>
+ * <li><strong>D</strong> for Right (Droite).</li>
+ * <li><strong>G</strong> for Left (Gauche).</li>
+ * <li><strong>A</strong> for Forward (Avancer).</li>
  * </ul>
  * 
  * @author vincent
  * 
  */
 public enum Instruction {
-	R, L, F;
+	D, G, A;
 
 	/**
 	 * Get an new {@link Orientation} from an {@link Instruction} and the
@@ -32,24 +32,24 @@ public enum Instruction {
 			Orientation orientation) {
 		switch (orientation) {
 		case N:
-			if (instruction == R)
+			if (instruction == D)
 				return Orientation.E;
-			if (instruction == L)
+			if (instruction == G)
 				return Orientation.W;
 		case S:
-			if (instruction == R)
+			if (instruction == D)
 				return Orientation.W;
-			if (instruction == L)
+			if (instruction == G)
 				return Orientation.E;
 		case E:
-			if (instruction == R)
+			if (instruction == D)
 				return Orientation.S;
-			if (instruction == L)
+			if (instruction == G)
 				return Orientation.N;
 		case W:
-			if (instruction == R)
+			if (instruction == D)
 				return Orientation.N;
-			if (instruction == L)
+			if (instruction == G)
 				return Orientation.S;
 		default:
 			return orientation;

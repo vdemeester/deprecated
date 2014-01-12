@@ -2,6 +2,9 @@ package com.github.vdemeester.mower;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * Command line client of MowItNow.
@@ -11,8 +14,9 @@ import java.io.IOException;
  */
 public class MowItNow {
 
-	final File file;
-
+	private InstructionParser parser;
+	private Collection<Mower> mowers;
+	
 	/**
 	 * Create a MowItNow using a {@link File}.
 	 * 
@@ -20,11 +24,17 @@ public class MowItNow {
 	 * @throws IOException
 	 */
 	public MowItNow(File file) {
-		this.file = file;
+		parser = new InstructionParser(file);
 	}
 
-	private void run() {
-
+	protected void run() throws IOException {
+		parser.parse();
+		mowers = parser.getMowers();
+		for (Mower mower : mowers) {
+			for (Instruction instruction : parser.getInstructionsFor(mower)) {
+				mower.process(instruction);
+			}
+		}
 	}
 
 	/**
@@ -32,11 +42,15 @@ public class MowItNow {
 	 * 
 	 * @return
 	 */
-	public String[] getMowerPositions() {
-		return new String[] {};
+	public List<String> getMowerPositions() {
+		List<String> positions = new ArrayList<String>();
+		for (Mower mower : mowers) {
+			positions.add(mower.getPosition());
+		}
+		return positions;
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		File file = loadFileFromArgs(args);
 		MowItNow mowItNow = new MowItNow(file);
 		mowItNow.run();
