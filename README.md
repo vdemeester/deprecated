@@ -1,1 +1,1 @@
-# x-mower <img src="https://secure.travis-ci.org/vdemeester/x-mower.png" alt="Build status" />
+# x-mower <img src="https://travis-ci.org/vdemeester/x-mower.png?branch=master" alt="Build status" />
