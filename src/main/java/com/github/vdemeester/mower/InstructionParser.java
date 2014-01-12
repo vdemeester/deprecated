@@ -58,7 +58,7 @@ public class InstructionParser {
 			Integer y = Integer.valueOf(fieldCoordinates[1]);
 			return new Field(new Coordinates(x, y));
 		} catch (NumberFormatException e) {
-			throw new InvalidInstrutionFileException(INVALID_FIELD_DEFINITION);
+			throw new InvalidInstrutionFileException(INVALID_FIELD_DEFINITION, e);
 		}
 	}
 
@@ -87,9 +87,9 @@ public class InstructionParser {
 			Orientation orientation = Orientation.valueOf(elements[2]);
 			return new Mower(new Coordinates(x, y), orientation, field);
 		} catch (NumberFormatException e) {
-			throw new InvalidInstrutionFileException(INVALID_MOWER_DEFINITION);
+			throw new InvalidInstrutionFileException(INVALID_MOWER_DEFINITION, e);
 		} catch (IllegalArgumentException e) {
-			throw new InvalidInstrutionFileException(INVALID_MOWER_DEFINITION);
+			throw new InvalidInstrutionFileException(INVALID_MOWER_DEFINITION, e);
 		}
 	}
 
@@ -106,7 +106,7 @@ public class InstructionParser {
 			return instructions;
 		} catch (IllegalArgumentException e) {
 			throw new InvalidInstrutionFileException(
-					INVALID_INSTRUCTION_DEFINITION);
+					INVALID_INSTRUCTION_DEFINITION, e);
 		}
 	}
 
