@@ -11,11 +11,20 @@ public class Coordinates {
 	private Integer x;
 	private Integer y;
 
+	/**
+	 * The default coordinates are (0,0).
+	 */
 	public Coordinates() {
 		this.x = 0;
 		this.y = 0;
 	}
 
+	/**
+	 * Create a {@link Coordinates} object with (x,y) as coordinates.
+	 * 
+	 * @param x
+	 * @param y
+	 */
 	public Coordinates(Integer x, Integer y) {
 		super();
 		this.x = x;
