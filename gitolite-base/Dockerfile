@@ -32,5 +32,8 @@ RUN chown -R git:git /var/git
 # http://stackoverflow.com/questions/22547939/docker-gitlab-container-ssh-git-login-error
 RUN sed -i '/session required pam_loginuid.so/d' /etc/pam.d/sshd
 
+VOLUME ["/var/git/repositories"]
+EXPOSE 22
+
 ADD ./init.sh /init
 RUN chmod +x /init
