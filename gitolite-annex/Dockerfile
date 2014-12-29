@@ -1,4 +1,4 @@
-FROM gitolite-base
+FROM vdemeester/gitolite-base
 MAINTAINER Vincent Demeester <vincent@sbr.pm>
 
 RUN apt-get -y install git-annex
