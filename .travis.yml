@@ -2,4 +2,8 @@ language: java
 jdk:
 - openjdk7
 - oraclejdk7
-script: ./gradlew getIdeaSdk test
+install:
+  - TERM=dumb ./gradlew assemble
+
+script:
+  - TERM=dumb ./gradlew check getIdeaSdk test
