@@ -3,7 +3,7 @@ jdk:
 - openjdk7
 - oraclejdk7
 install:
-  - TERM=dumb ./gradlew assemble
+  - echo "Noting to do.."
 
 script:
-  - TERM=dumb ./gradlew check getIdeaSdk test
+  - TERM=dumb ./travis.sh

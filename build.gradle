@@ -61,7 +61,7 @@ task getIdeaSdk (dependsOn: downloadIdeaSdk) << {
     if (!ideaSdk.isDirectory()) {
         println("Extract ideaIC-${ideaVersion} into ${ideaSdk.name}")
         copy {
-            from tarTree(new File(toolsDir, "ideaIC-${ideaVersion}.tar.gz"))
+            from tarTree(resources.gzip(new File(toolsDir, "ideaIC-${ideaVersion}.tar.gz")))
             into toolsDir
         }
         toolsDir.eachFile(FileType.DIRECTORIES) { dir ->
