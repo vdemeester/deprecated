@@ -1,0 +1,48 @@
+<idea-plugin version="2">
+    <id>com.github.vdemeester.idea.docker</id>
+    <name>Idea docker</name>
+    <version>0.1</version>
+    <vendor email="vincent.demeester@zenika.com" url="http://www.zenika.com">Zenika</vendor>
+
+    <description><![CDATA[
+      Idea docker enables you to build and run codes inside
+      Docker, <em>seemlessly</em>. This way you can run ruby code without
+      even the ruby runtime installed.
+    ]]></description>
+
+    <change-notes><![CDATA[
+      2015-02-09 Initial project
+    ]]>
+    </change-notes>
+
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="131"/>
+
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <application-components>
+        <!-- Add your application components here -->
+    </application-components>
+
+    <project-components>
+        <!-- Add your project components here -->
+    </project-components>
+
+    <actions>
+        <!-- Add your actions here -->
+        <group id="Docker.Menu" text="_Docker" popup="true">
+            <add-to-group group-id="RunMenu" anchor="last"/>
+            <action class="com.github.vdemeester.idea.docker.DockerAction" id="Docker.Action1" text="Action 1"/>
+            <action class="com.github.vdemeester.idea.docker.DockerAction" id="Docker.Action2" text="Action 1"/>
+        </group>
+    </actions>
+
+</idea-plugin>

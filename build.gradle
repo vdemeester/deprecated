@@ -1,0 +1,65 @@
+import groovy.io.FileType
+
+plugins {
+    id "de.undercouch.download" version "1.2"
+}
+
+apply plugin: 'java'
+
+def toolsDir = new File("tools")
+def ideaSdk = new File(toolsDir, "idea-IC")
+def ideaSdkTar = new File(toolsDir, "ideaIC-${ideaVersion}.tar.gz")
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+        resources {
+            srcDir 'resources'
+        }
+        compileClasspath += files(new File(ideaSdk, "lib").listFiles())
+    }
+    test {
+        java {
+            srcDir 'src'
+        }
+        resources {
+            srcDir 'resources'
+        }
+        compileClasspath += files(new File(ideaSdk, "lib").listFiles())
+    }
+}
+
+
+task initFolders << {
+    if (!toolsDir.isDirectory()) {
+        toolsDir.mkdir()
+    }
+}
+
+task downloadIdeaSdk (dependsOn: initFolders) << {
+    if (!ideaSdkTar.exists()) {
+        println("${ideaSdkTar} does not exists, downloading it")
+        download {
+            src "http://download-cf.jetbrains.com/idea/ideaIC-${ideaVersion}.tar.gz"
+            dest ideaSdkTar
+        }
+    }
+}
+
+task getIdeaSdk (dependsOn: downloadIdeaSdk) << {
+    if (!ideaSdk.isDirectory()) {
+        println("Extract ideaIC-${ideaVersion} into ${ideaSdk.name}")
+        copy {
+            from tarTree(new File(toolsDir, "ideaIC-${ideaVersion}.tar.gz"))
+            into toolsDir
+        }
+        toolsDir.eachFile(FileType.DIRECTORIES) { dir ->
+            if (dir.name.startsWith("idea-IC-")) {
+                dir.renameTo(ideaSdk)
+            }
+        }
+        new File(toolsDir, "ideaIC-${ideaVersion}.tar.gz").delete()
+    }
+}
