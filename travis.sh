@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Compile Java and tests
-./gradlew compileJava compileTestJava
+./gradlew test
 
 # Was our build successful?
 stat=$?

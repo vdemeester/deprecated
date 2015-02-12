@@ -5,10 +5,19 @@ plugins {
 }
 
 apply plugin: 'java'
+apply plugin: 'maven'
 
 def toolsDir = new File("tools")
 def ideaSdk = new File(toolsDir, "idea-IC")
 def ideaSdkTar = new File(toolsDir, "ideaIC-${ideaVersion}.tar.gz")
+
+dependencies {
+    testCompile 'junit:junit:4.11'
+}
+
+repositories {
+    mavenCentral()
+}
 
 sourceSets {
     main {
@@ -22,7 +31,7 @@ sourceSets {
     }
     test {
         java {
-            srcDir 'src'
+            srcDir 'test'
         }
         resources {
             srcDir 'resources'
@@ -62,4 +71,8 @@ task getIdeaSdk (dependsOn: downloadIdeaSdk) << {
         }
         new File(toolsDir, "ideaIC-${ideaVersion}.tar.gz").delete()
     }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.12'
 }
