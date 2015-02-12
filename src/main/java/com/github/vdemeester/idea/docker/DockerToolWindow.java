@@ -17,9 +17,6 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 
-/**
- * Created by vincent on 2/12/15.
- */
 public class DockerToolWindow extends AbstractProjectComponent {
 
     private ConsoleViewImpl consoleViewImpl;

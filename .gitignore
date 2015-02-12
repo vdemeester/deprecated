@@ -16,7 +16,6 @@ target
 build
 # tools will be fetch when building
 tools
-
-.idea
-
 .gradle
+.idea/workspace.xml
+classes

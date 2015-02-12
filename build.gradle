@@ -15,25 +15,13 @@ repositories {
 
 sourceSets {
     main {
-        java {
-            srcDir 'src'
-        }
-        resources {
-            srcDir 'resources'
-        }
         compileClasspath += files(new File(ideaSdk, "lib").listFiles())
     }
     test {
-        java {
-            srcDir 'test'
-        }
-        resources {
-            srcDir 'resources'
-        }
         compileClasspath += files(new File(ideaSdk, "lib").listFiles())
     }
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '1.12'
+    gradleVersion = '2.2.1'
 }
