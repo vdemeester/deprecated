@@ -46,30 +46,11 @@
         <!-- Add your actions here -->
 
         <group id="Docker.Tools" popup="true" text="Docker Tools"
-               description="Go tools support">
-               <!--description="Go tools support" class="com.github.vdemeester.idea.actions.NewGoGroup">-->
+               description="Docker tools support">
+               <!--description="Docker tools support" class="com.github.vdemeester.idea.actions.NewGoGroup">-->
 
             <action class="com.github.vdemeester.idea.docker.DockerAction" id="Docker.Action1" text="Action 1"/>
             <action class="com.github.vdemeester.idea.docker.DockerAction" id="Docker.Action2" text="Action 1"/>
-
-            <!--<action id="Go.Fmt.FileRunner"-->
-                    <!--class="ro.redeul.google.go.ide.actions.GoFmtFileRunner"-->
-                    <!--text="go fmt file" description="Format current file with go fmt"-->
-                    <!--icon="/icons/go_13x13.png">-->
-                <!--<keyboard-shortcut first-keystroke="ctrl alt shift f" keymap="$default"/>-->
-            <!--</action>-->
-
-            <!--<action id="Go.Fmt.ProjectRunner"-->
-                    <!--class="ro.redeul.google.go.ide.actions.GoFmtProjectRunner"-->
-                    <!--text="go fmt project" description="Format current project with go fmt"-->
-                    <!--icon="/icons/go_13x13.png">-->
-                <!--<keyboard-shortcut first-keystroke="ctrl alt shift g" keymap="$default"/>-->
-            <!--</action>-->
-
-            <!--<action id="Go.Tools.AddGoSdk" text="Add Go Sdk Support"-->
-            <!--description="Add Go Sdk to current module"-->
-            <!--class="ro.redeul.google.go.tools.actions.AddGoSdkSupport">-->
-            <!--</action>-->
 
             <add-to-group group-id="ToolsMenu" anchor="last"/>
         </group>
