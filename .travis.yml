@@ -2,4 +2,4 @@ language: java
 jdk:
 - openjdk7
 - oraclejdk7
-script: ./travis.sh
+script: ./gradlew getIdeaSdk test

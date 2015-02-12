@@ -48,7 +48,7 @@ task initFolders << {
 }
 
 task downloadIdeaSdk (dependsOn: initFolders) << {
-    if (!ideaSdkTar.exists()) {
+    if (!ideaSdkTar.exists() && !ideaSdk.isDirectory()) {
         println("${ideaSdkTar} does not exists, downloading it")
         download {
             src "http://download-cf.jetbrains.com/idea/ideaIC-${ideaVersion}.tar.gz"
