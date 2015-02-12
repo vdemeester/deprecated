@@ -6,4 +6,4 @@ install:
   - echo "Noting to do.."
 
 script:
-  - TERM=dumb ./travis.sh
+  - ./travis.sh
