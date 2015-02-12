@@ -2,7 +2,7 @@
     <id>com.github.vdemeester.idea.docker</id>
     <name>Idea docker</name>
     <version>0.1</version>
-    <vendor email="vincent.demeester@zenika.com" url="http://www.zenika.com">Zenika</vendor>
+    <vendor email="vincent.demeester@zenika.com" url="http://github.com/vdemeester">Vincent Demeester</vendor>
 
     <description><![CDATA[
       Idea docker enables you to build and run codes inside
