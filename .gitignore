@@ -18,4 +18,5 @@ build
 tools
 .gradle
 .idea/workspace.xml
+.idea/libraries
 classes

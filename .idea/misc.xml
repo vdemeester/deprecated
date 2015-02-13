@@ -69,7 +69,7 @@
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/gradle" />
+    <file type="web" url="file://$PROJECT_DIR$" />
   </component>
   <component name="IdProvider" IDEtalkID="B6507081D69FFE4B5B3D2E94E1904CD5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
