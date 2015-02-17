@@ -6,9 +6,10 @@ def ideaSdk = new File(toolsDir, "idea-IC")
 def ideaSdkTar = new File(toolsDir, "ideaIC-${ideaVersion}.tar.gz")
 
 dependencies {
-    testCompile 'junit:junit:4.11'
-
     compile 'com.spotify:docker-client:2.7.6'
+    compile 'com.typesafe:config:1.2.1'
+
+    testCompile 'junit:junit:4.11'
 }
 
 repositories {
