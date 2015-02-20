@@ -4,6 +4,8 @@ apply plugin: 'maven'
 def toolsDir = new File("tools")
 def ideaSdk = new File(toolsDir, "idea-IC")
 def ideaSdkTar = new File(toolsDir, "ideaIC-${ideaVersion}.tar.gz")
+def intellij_libs = fileTree(dir: ideaSdk.absolutePath + "/lib/", include: '*.jar')
+def runClassPath = intellij_libs.plus(files("${System.env.JAVA_HOME}/lib/tools.jar"))
 
 dependencies {
     compile 'com.spotify:docker-client:2.7.6'
@@ -18,11 +20,60 @@ repositories {
 
 sourceSets {
     main {
+        java {
+            srcDir 'src/main/java'
+        }
+        resources {
+            srcDir 'src/main/resources'
+        }
         compileClasspath += files(new File(ideaSdk, "lib").listFiles())
     }
     test {
+        java {
+            srcDir 'src/test/java'
+        }
+        resources {
+            srcDir 'src/test/resources'
+        }
         compileClasspath += files(new File(ideaSdk, "lib").listFiles())
     }
+}
+
+jar {
+    def buildNumber = System.env.BUILD_NUMBER?.toInteger()
+    from("src/main/resources/META-INF") {
+        include 'plugin.xml' into "META-INF" filter { String line -> buildNumber != null ? line.replaceAll("<version>(.+)</version>", "<version>\$1-${String.format("%08d", buildNumber)}</version>") : line }
+    }
+
+    from "src/main/resources"
+}
+
+task copyIntoIdea(dependsOn: build, type: Copy) {
+    into "build/run/plugins/"
+    from jar.archivePath
+}
+
+task runIdea(type: JavaExec, dependsOn: copyIntoIdea) {
+    main = "com.intellij.idea.Main"
+    classpath = runClassPath
+
+    systemProperty "idea.config.path", "build/run/config"
+    systemProperty "idea.system.path", "build/run/system"
+    systemProperty "idea.plugins.path", "build/run/plugins"
+    systemProperty "idea.launcher.port", "8998"
+    systemProperty "idea.launcher.bin.path", ideaSdk.absolutePath + "bin/"
+}
+
+task debugIdea(type: JavaExec, dependsOn: copyIntoIdea) {
+    main = "com.intellij.idea.Main"
+    classpath = runClassPath
+
+    systemProperty "idea.config.path", "build/run/config"
+    systemProperty "idea.system.path", "build/run/system"
+    systemProperty "idea.plugins.path", "build/run/plugins"
+    systemProperty "idea.launcher.port", "8998"
+    systemProperty "idea.launcher.bin.path", ideaSdk.absolutePath + "bin/"
+    jvmArgs '-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005'
 }
 
 task wrapper(type: Wrapper) {
