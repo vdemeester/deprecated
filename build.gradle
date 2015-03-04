@@ -39,12 +39,26 @@ sourceSets {
     }
 }
 
+jar {
+    def buildNumber = System.env.BUILD_NUMBER?.toInteger()
+    from("META-INF") {
+        include 'plugin.xml' into "META-INF" filter { String line -> buildNumber != null ? line.replaceAll("<version>(.+)</version>", "<version>\$1-${String.format("%08d", buildNumber)}</version>") : line }
+    }
+
+    from "src/main/resources"
+}
+
 task copyIntoIdea(dependsOn: build, type: Copy) {
-    into "build/run/plugins/"
+    into "build/run/plugins/idea-docker/lib/"
     from jar.archivePath
 }
 
-task runIdea(type: JavaExec, dependsOn: copyIntoIdea) {
+task copyDepsIntoIdea(dependsOn: copyIntoIdea, type: Copy) {
+    into "build/run/plugins/idea-docker/lib/"
+    from configurations.runtime
+}
+
+task runIdea(type: JavaExec, dependsOn: copyDepsIntoIdea) {
     main = "com.intellij.idea.Main"
     classpath = runClassPath
 
